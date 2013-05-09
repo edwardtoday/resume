@@ -1,0 +1,209 @@
+\documentclass[11pt,a4paper]{moderncv/moderncv}
+
+\moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+% \usepackage{xunicode, xltxtra}
+% \XeTeXlinebreaklocale "zh"
+% \widowpenalty=10000
+% %\setmainfont[Mapping=tex-text]{文泉驿正黑}
+% \usepackage{CJKutf8}
+% \setmainfont[Mapping=tex-text]{Hiragino Sans GB}
+% \setsansfont[Mapping=tex-text]{Hiragino Sans GB}
+% \CJKtilde
+
+\usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
+\punctstyle{kaiming}
+\setCJKmainfont[BoldFont=Hiragino Sans GB]{Hiragino Sans GB}
+\setCJKmonofont{Monaco}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\setlength{\parskip}{0.3cm}	
+
+\usepackage[scale=0.8]{geometry}  % adjust the page margins
+\recomputelengths                             % required when changes are made to page layout lengths
+
+% personal data
+\firstname{卿培}
+\familyname{}
+% \email{edward.qing@gmail.com}
+\email{edwardtoday@gmail.com}
+% \phone[mobile]{+86 18621110317}
+\phone[mobile]{+852 6937 8386}
+
+
+\social[github]{edwardtoday}
+\homepage{qingpei.me}
+
+% \quote{``Do what you fear, and the death of fear is certain.''\\-- Anthony Robbins}
+
+\nopagenumbers{}            % uncomment to suppress automatic page numbering for CVs longer than one page
+
+\begin{document}
+\maketitle
+
+\section{Education}
+\cventry{2011--2012}{MSc in Software Technology}{The Hong Kong Polytechnic University}{Hong Kong}{GPA:3.95/4}{with distinction}
+\cventry{2006--2010}{BEng in Computer Science and Technology}{Tsinghua University}{Beijing}{GPA:85/100}{}
+\cventry{2007--2010}{BS in Economics}{Tsinghua University}{Beijing}{second major}{}
+
+% \section{Master thesis}
+% \cvline{title}{\emph{Title}}
+% \cvline{supervisors}{Supervisors}
+% \cvline{description}{\small Short thesis abstract}
+
+\section{Experience}
+\cventry{2012--present}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{Hong Kong}{}{}
+
+\cventry{2010--2011}{Software Developer}{Virtuos Games}{Shanghai}{}
+{
+Architected and implemented a cross-platform game on both PC/Mac and iPhone/iPad. In charge of the graphics performance optimization.
+Designed internal synchronization tool with C++ and Python to improve inter-department cooperation efficiency.
+}
+
+\cventry{2009}{Intern Programmer}{Endress+Hauser}{Shanghai}{}
+{
+Designed 3D models with Modo to present previews of customized products.
+Proposed and designed a product customization software with dynamic help for each part.
+}
+
+\cventry{2008}{Volunteer, Assistant Officer}{International Broadcast Center, 29th Olympic Games}
+{Beijing}{}
+{
+Administrated attendance system of the venue, sending daily report on venue operations status.
+Assisted arranging meal time slots for divisions to guarantee uninterrupted service and to minimize waiting time.
+}
+
+\cventry{2007-2009}{Vice Director, Director}{Liaison Department, Student Union of Dept. CS\&T, Tsinghua University}
+{Beijing}{}
+{
+Coordinated actions on seeking sponsors for student activities.
+Raised money for freshman orientation party.
+}
+
+\section{Projects}
+\cventry{2013}
+{image-converter-for-kindle: Convert JPEG images to kindle screensaver size}
+{Python}
+{}{}
+{
+}
+
+\cventry{2013}
+{mymaxim: Show random maxim in my blog posts.}
+{Javascript}
+{}{}
+{
+}
+
+\cventry{2013}
+{3D Palmprint Recognition}
+{MATLAB}
+{}{}
+{
+}
+
+\cventry{2012}
+{hkputhesis: The Hong Kong Polytechnic University MSc thesis latex template}
+{LaTeX}
+{}{}
+{
+}
+
+\cventry{2010}
+{Real-time Parallel Decoding of Multi-view Video}
+{C++}
+{Adviser: Lifeng Sun}{\textit{Scoring 93/100, top 10\%}}
+{
+Involved in the scheduling algorithm design for dual-view to 8-view MVC video.\
+Assisted to implement a MVC enc/decoding tool, focusing on the decoding.
+Designed and implemented a 3D MVC player on the NVIDIA 3D Vision platform.
+Adopted by China Central Television to provide experimental 3D online broadcasting of the 2010 Asian Games.
+}
+
+\cventry{2010}
+{MIPS CPU Simulator}
+{Java}
+{}{}
+{
+}
+
+\cventry{2009}
+{Intelligent Video Processing}
+{C++}
+{}{}
+{
+Implemented mean shift, GrabCut as pre-processors in the image processing chain.
+Modified GrabCut by replacing user interaction with edge detection to achieve automatic object library creation.
+Gave presentations in weekly discussion on the following paper: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste
+}
+
+\cventry{2009}
+{Ray-tracing Renderer and Mesh Simplification}
+{C++}
+{Computer Graphics course project}{ranked 6/90+ students}
+{
+Implemented a C++ ray-tracing renderer with Phong model.
+Top 10\% by rendering speed in class.
+Implemented both vertex decimation and edge contraction algorithms to simplify a mesh to a customizable complexity.
+Provided real-time preview of simplification progress with OpenGL.\
+}
+
+\cventry{2009}
+{PhoneMe: A cross-platform address book}
+{Java}
+{Software Engineering course project}{ranked 2/50+ students}
+{
+Team leader.
+Drafted and maintained requirements, design and technical document.
+Committed 30\% code of the 16,000-line project.
+Allocated tasks to team members weekly and tracked daily progress and issues.
+Held project discussion weekly and when necessary to minimize mis-communication costs among members.
+}
+
+\cventry{2009}
+{Simple FTP Client and Server}
+{C++}
+{}{}
+{
+Implemented a lite FTP server and a client with C++ socket.
+}
+
+\cventry{2008}
+{16-bit FPGA MIPS CPU}
+{VHDL}
+{}{}
+{
+Designed and co-implemented an FPGA-based CPU with pipeline and instruction forwarding corollary. Memory controller embedded.
+}
+
+\cventry{2008}
+{Mine Sweeper on FPGA}
+{VHDL}
+{}{}
+{
+Implemented a mine sweeper game on FPGA platform with mouse, keyboard and VGA controllers included.
+}
+
+
+% Publications from a BibTeX file without multibib
+% to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\section{Awards}
+\cventry{2009}{Outstanding Student Leaders in Department of Computer Science and Technology}{Tsinghua University}{}{}{}
+\cventry{2008}{Excellent Volunteer at International Broadcast Center (IBC)}{The Beijing Organizing Committee for the Games of the XXIX Olympiad}{}{}{}
+
+
+\section{Skills}
+\cventry{Languages}{Python = MATLAB = Java > C++ > R}{}{}{}{}
+\cventry{English}{CET-6 652, TOEFL 107}{fluent in spoken and written English}{}{}{}
+% \cventry{Zhihu}{\url{zhihu.com/people/qingpei}}{My questions and answers. (Chinese version of Quora)}{}{}{}
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\end{document}
