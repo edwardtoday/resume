@@ -43,7 +43,7 @@
 \maketitle
 
 \section{教育经历}
-\cventry{2011--2012}{软件科技专业 硕士}{香港理工大学}{香港}{学分绩:3.95/4}{获“成绩优异”评价}
+\cventry{2011--2012}{软件科技专业 硕士}{香港理工大学}{香港}{学分绩:3.95/4 获“成绩优异”评价}{}
 \cventry{2006--2010}{计算机科学与技术专业 学士}{清华大学}{北京}{学分绩:85/100}{}
 \cventry{2007--2010}{经济学 学士}{清华大学}{北京}{二学位}{}
 
@@ -55,6 +55,12 @@
 \section{工作经历}
 \cventry{2012至今}{助研}{人體生物特徵識別研究中心}{香港理工大学计算学系}{}
 {
+\begin{description}
+	\item[研究对象：] 健康与糖尿病人的脉搏采样、心电图、舌头图像、呼吸气体成分测试结果、正面脸部照片等多种格式的数据。
+	\item[研究目的：] 寻找疾病（以糖尿病为例）与多种体征之间有无强相关性，并利用存在的相关性建立诊断模型，提高诊断的准确性与一致性。
+	\item[研究方法：] 多次迭代``特征提取$\rightarrow$多种特征融合$\rightarrow$特征优化$\rightarrow$机器学习$\rightarrow$模型简化''的过程。
+	\item[当前成果：] 我们在400余人的采样上做到糖尿病诊断97.1\%的准确率。作为对比，仅利用单一类型数据特征建立的诊断模型，准确率在65\%到90\%不等。我们已经将模型的误诊率降低了大约一个数量级。
+\end{description}
 }
 
 \cventry{2010--2011}{软件工程师}{上海维塔士软件科技公司}{上海}{}
@@ -92,22 +98,22 @@
 }
 
 \section{项目经验}
-\cventry{2013}
-{image-converter-for-kindle}
-{Python}
-{}{}
-{
-自动缩放、裁剪、旋转、优化图片，以便在Kindle的电子墨水屏幕上更好地显示。
-}
-
-\cventry{2013}
-{mymaxim}
-{Javascript}
-{}{}
-{
-在我的个人网站上随机显示名言的脚本。
-}
-
+% \cventry{2013}
+% {image-converter-for-kindle}
+% {Python}
+% {}{}
+% {
+% 自动缩放、裁剪、旋转、优化图片，以便在Kindle的电子墨水屏幕上更好地显示。
+% }
+% 
+% \cventry{2013}
+% {mymaxim}
+% {Javascript}
+% {}{}
+% {
+% 在我的个人网站上随机显示名言的脚本。
+% }
+% 
 \cventry{2012}
 {hkputhesis: 香港理工大学计算学系硕士论文\LaTeX 模板}
 {LaTeX}
@@ -117,12 +123,12 @@
 }
 
 \cventry{2011--2012}
-{3D Palmprint Recognition}
+{3D掌纹识别}
 {MATLAB}
 {}{}
 {
 \begin{itemize}
-	\item 用3D掌纹特征达到了前所未有的98.7\%的分类准确率。（此前的文献不到93\%。）
+	\item 用3D掌纹特征达到了世界领先的98.7\%的身份验证准确率。（此前的文献不到93\%。）
 	\item 通过3D掌纹全局特征索引，将单个采样验证速度提高至2倍。
 \end{itemize}
 }
@@ -130,7 +136,7 @@
 \cventry{2010}
 {多视点视频的实时解码}
 {C++}
-{导师: 孙立峰}{\textit{毕设分数 93/100, 前 10\%}}
+{导师: 孙立峰}{\textit{分数 93/100, 前 10\%}}
 {
 \begin{itemize}
 	\item 参与双目至8目多视点视频的解码器调度算法设计。
@@ -139,81 +145,81 @@
 	\item 该项目被CCTV用于提供2010年亚运会的3D试验性网络视频转播。
 \end{itemize}
 }
-
-\cventry{2010}
-{MIPS CPU模拟器}
-{Java}
-{}{}
-{
-\begin{itemize}
-	\item 读入汇编代码并展示MIPS CPU如何执行该代码。
-	\item 所有寄存器和内存地址空间的状态可见。
-\end{itemize}
-}
-
-\cventry{2009}
-{智能视频处理}
-{C++}
-{}{}
-{
-\begin{itemize}
-	\item 实现meanshift、GrabCut等算法，用作图像预处理。
-	\item 修改GrabCut算法，将人机交互过程取消，用边缘检测代替其原有功能，实现全自动图像分割和物体数据库的建立。
-	\item 每周组会介绍一个算法，包括: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
-\end{itemize}
-}
-
-\cventry{2009}
-{光线跟踪渲染器及模型网格简化系统}
-{C++}
-{计算机图形学课程项目}{排名 6/90+}
-{
-\begin{itemize}
-	\item 用C++实现Phong模型光线跟踪渲染器。
-	\item 渲染速度在课程全部学生的前10\%。
-	\item 同时实现顶点删除和边折叠算法的网格简化代码，支持将网格简化至任意自定义复杂度。
-	\item 用OpenGL提供简化后网格的实时预览。
-\end{itemize}
-}
-
-\cventry{2009}
-{PhoneMe: 跨平台通讯录}
-{Java}
-{软件工程课程项目}{排名 2/50+}
-{
-\begin{itemize}
-	\item 草拟并维护需求文档、设计文档和技术文档。
-	\item 在16,000行项目代码中提交了其中30\%。
-	\item 分配组内任务，并跟踪每日进度。
-	\item 每周组织小组讨论，避免组员间的任务冲突与对项目细节的不同理解。
-	\item 任3人团队的组长。
-\end{itemize}
-}
+% 
+% \cventry{2010}
+% {MIPS CPU模拟器}
+% {Java}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item 读入汇编代码并展示MIPS CPU如何执行该代码。
+% 	\item 所有寄存器和内存地址空间的状态可见。
+% \end{itemize}
+% }
+% 
+% \cventry{2009}
+% {智能视频处理}
+% {C++}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item 实现meanshift、GrabCut等算法，用作图像预处理。
+% 	\item 修改GrabCut算法，将人机交互过程取消，用边缘检测代替其原有功能，实现全自动图像分割和物体数据库的建立。
+% 	\item 每周组会介绍一个算法，包括: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
+% \end{itemize}
+% }
+% 
+% \cventry{2009}
+% {光线跟踪渲染器及模型网格简化系统}
+% {C++}
+% {计算机图形学课程项目}{排名 6/90+}
+% {
+% \begin{itemize}
+% 	\item 用C++实现Phong模型光线跟踪渲染器。
+% 	\item 渲染速度在课程全部学生的前10\%。
+% 	\item 同时实现顶点删除和边折叠算法的网格简化代码，支持将网格简化至任意自定义复杂度。
+% 	\item 用OpenGL提供简化后网格的实时预览。
+% \end{itemize}
+% }
+% 
+% \cventry{2009}
+% {PhoneMe: 跨平台通讯录}
+% {Java}
+% {软件工程课程项目}{排名 2/50+}
+% {
+% \begin{itemize}
+% 	\item 草拟并维护需求文档、设计文档和技术文档。
+% 	\item 在16,000行项目代码中提交了其中30\%。
+% 	\item 分配组内任务，并跟踪每日进度。
+% 	\item 每周组织小组讨论，避免组员间的任务冲突与对项目细节的不同理解。
+% 	\item 任3人团队的组长。
+% \end{itemize}
+% }
 
 % \cventry{2009}
-% {Simple FTP Client and Server}
+% {简单FTP服务器与客户端}
 % {C++}
 % {}{}
 % {
 % Implemented a lite FTP server and a client with C++ socket.
 % }
 
-\cventry{2008}
-{16-bit FPGA MIPS CPU}
-{VHDL}
-{}{}
-{
-\begin{itemize}
-	\item 设计了五级流水线结构。
-	\item 用VHDL实现了一个MIPS CPU。
-	\item 驱动了包括VGA显示器和PS/2鼠标、键盘在内的外设。
-	\item 处理器主频在Cyclone II FPGA上可达50MHz.
-	\item 任3人团队的组长。	
-\end{itemize}
-}
+% \cventry{2008}
+% {16位MIPS指令集CPU的FPGA实现}
+% {VHDL}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item 设计了五级流水线结构。
+% 	\item 用VHDL实现了一个MIPS CPU。
+% 	\item 驱动了包括VGA显示器和PS/2鼠标、键盘在内的外设。
+% 	\item 处理器主频在Cyclone II FPGA上可达50MHz.
+% 	\item 任3人团队的组长。	
+% \end{itemize}
+% }
 
 % \cventry{2008}
-% {Mine Sweeper on FPGA}
+% {扫雷游戏的FPGA实现}
 % {VHDL}
 % {}{}
 % {
@@ -236,9 +242,9 @@
 
 
 \section{掌握技能}
-\cventry{程序设计}{Python = MATLAB = Java > C++ > R}{}{}{}{}
-\cventry{英语}{CET-6 652, TOEFL 107}{英语流利读写}{}{}{}
-% \cventry{Zhihu}{\url{zhihu.com/people/qingpei}}{My questions and answers. (Chinese version of Quora)}{}{}{}
+\cventry{计算机语言}{工作中使用: MATLAB, C++, \LaTeX}{个人项目使用: Python, Java, R}{}{}{}
+\cventry{英语}{CET-6 652, TOEFL 107}{英语流利对话、读写}{}{}{}
+\cventry{知乎}{\url{zhihu.com/people/qingpei}}{我在知乎上的回答}{}{}{}
 
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
