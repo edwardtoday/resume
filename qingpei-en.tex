@@ -30,7 +30,7 @@
 \maketitle
 
 \section{Education}
-\cventry{2011--2012}{MSc in Software Technology}{The Hong Kong Polytechnic University}{Hong Kong}{GPA:3.95/4}{with distinction}
+\cventry{2011--2012}{MSc in Software Technology}{The Hong Kong Polytechnic University}{Hong Kong}{GPA:3.95/4 \textbf{with distinction}}{}
 \cventry{2006--2010}{BEng in Computer Science and Technology}{Tsinghua University}{Beijing}{GPA:85/100}{}
 \cventry{2007--2010}{BS in Economics}{Tsinghua University}{Beijing}{second major}{}
 
@@ -40,7 +40,15 @@
 % \cvline{description}{\small Short thesis abstract}
 
 \section{Experience}
-\cventry{2012--present}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{Hong Kong}{}{}
+\cventry{2012--present}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{Hong Kong}{}
+{
+\begin{description}
+	\item[Data Source:] Samples of pulse, electrocardiogram, tongue photo, front face photo and breath composition analysis results from both healthy and diabetes people.
+	\item[Objective:] To discover if some desease (diabetes in this case) has strong correlation with multiple physical signs of human body. Build a diagnosis model bases on the correlation to improve accuracy and consistency of diagnoses.
+	\item[Methodology:] Iterations of ``Feature Extraction $\rightarrow$ Fusion of Multiple Features $\rightarrow$ Feature Optimization $\rightarrow$ Machine Learning $\rightarrow$ Model Simplificaiton'' process.
+	\item[Current Status:]  We achived an accuracy of 97.1\% of diabetes diagnosis. By contrast, the accuracies using a single source of physical signs were 65\% to 90\%. Thus we have lowered the misdiagnosis rate by roughly an order of magnitude.
+\end{description}
+}
 
 \cventry{2010--2011}{Software Developer}{Virtuos Games}{Shanghai}{}
 {
@@ -78,22 +86,22 @@
 
 \section{Projects}
 
-\cventry{2013}
-{image-converter-for-kindle: Convert JPEG images to kindle screensaver size}
-{Python}
-{}{}
-{
-Resize, crop, rotate and optimize images for the eink screen on Kindle.
-}
-
-\cventry{2013}
-{mymaxim: Show random maxim in my blog posts.}
-{Javascript}
-{}{}
-{
-A script that shows random maxims on my personal site.
-}
-
+% \cventry{2013}
+% {image-converter-for-kindle: Convert JPEG images to kindle screensaver size}
+% {Python}
+% {}{}
+% {
+% Resize, crop, rotate and optimize images for the eink screen on Kindle.
+% }
+% 
+% \cventry{2013}
+% {mymaxim: Show random maxim in my blog posts.}
+% {Javascript}
+% {}{}
+% {
+% A script that shows random maxims on my personal site.
+% }
+% 
 \cventry{2012}
 {hkputhesis: The Hong Kong Polytechnic University MSc thesis latex template}
 {LaTeX}
@@ -108,7 +116,7 @@ No one has ever made such a template for HKPU thesis. While I was writing my MSc
 {}{}
 {
 \begin{itemize}
-	\item Achieved an unprecedented 98.7\% classification accuracy using 3D palmprint features. (Accuracies found in previous literiture were less than 93\%.)
+	\item Achieved a world leading 98.7\% identification accuracy using 3D palmprint features. (Accuracies found in previous literiture were less than 93\%.)
 	\item 2X speedup (compared to searching in sorted database) gained by utilizing the 3D global feature index.
 \end{itemize}
 }
@@ -126,55 +134,55 @@ No one has ever made such a template for HKPU thesis. While I was writing my MSc
 \end{itemize}
 }
 
-\cventry{2010}
-{MIPS CPU Simulator}
-{Java}
-{}{}
-{
-\begin{itemize}
-	\item A simulator that reads assembly code and illustrates how a MIPS CPU would execute it.
-	\item States of all registers and memory spaces can be shown.
-\end{itemize}
-}
+% \cventry{2010}
+% {MIPS CPU Simulator}
+% {Java}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item A simulator that reads assembly code and illustrates how a MIPS CPU would execute it.
+% 	\item States of all registers and memory spaces can be shown.
+% \end{itemize}
+% }
 
-\cventry{2009}
-{Intelligent Video Processing}
-{C++}
-{}{}
-{
-\begin{itemize}
-	\item Implemented mean shift, GrabCut as pre-processors in the image processing chain.
-	\item Modified GrabCut by replacing user interaction with edge detection to achieve automatic object library creation.
-	\item Gave presentations in weekly discussion on the following paper: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
-\end{itemize}
-}
+% \cventry{2009}
+% {Intelligent Video Processing}
+% {C++}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item Implemented mean shift, GrabCut as pre-processors in the image processing chain.
+% 	\item Modified GrabCut by replacing user interaction with edge detection to achieve automatic object library creation.
+% 	\item Gave presentations in weekly discussion on the following paper: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
+% \end{itemize}
+% }
 
-\cventry{2009}
-{Ray-tracing Renderer and Mesh Simplification}
-{C++}
-{Computer Graphics course project}{ranked 6/90+ students}
-{{
-\begin{itemize}
-	\item Implemented a C++ ray-tracing renderer with Phong model.
-	\item Top 10\% by rendering speed in class.
-	\item Implemented both vertex decimation and edge contraction algorithms to simplify a mesh to a customizable complexity.
-	\item Provided real-time preview of simplification progress with OpenGL.
-\end{itemize}}
-}
+% \cventry{2009}
+% {Ray-tracing Renderer and Mesh Simplification}
+% {C++}
+% {Computer Graphics course project}{ranked 6/90+ students}
+% {{
+% \begin{itemize}
+% 	\item Implemented a C++ ray-tracing renderer with Phong model.
+% 	\item Top 10\% by rendering speed in class.
+% 	\item Implemented both vertex decimation and edge contraction algorithms to simplify a mesh to a customizable complexity.
+% 	\item Provided real-time preview of simplification progress with OpenGL.
+% \end{itemize}}
+% }
 
-\cventry{2009}
-{PhoneMe: A cross-platform address book}
-{Java}
-{Software Engineering course project}{ranked 2/50+ students}
-{
-\begin{itemize}
-	\item Drafted and maintained requirements, design and technical document.
-	\item Committed 30\% code of the 16,000-line project.
-	\item Allocated tasks to team members weekly and tracked daily progress and issues.
-	\item Held project discussion weekly and when necessary to minimize mis-communication costs among members.
-	\item Worked as a team leader.
-\end{itemize}
-}
+% \cventry{2009}
+% {PhoneMe: A cross-platform address book}
+% {Java}
+% {Software Engineering course project}{ranked 2/50+ students}
+% {
+% \begin{itemize}
+% 	\item Drafted and maintained requirements, design and technical document.
+% 	\item Committed 30\% code of the 16,000-line project.
+% 	\item Allocated tasks to team members weekly and tracked daily progress and issues.
+% 	\item Held project discussion weekly and when necessary to minimize mis-communication costs among members.
+% 	\item Worked as a team leader.
+% \end{itemize}
+% }
 
 % \cventry{2009}
 % {Simple FTP Client and Server}
@@ -184,19 +192,19 @@ No one has ever made such a template for HKPU thesis. While I was writing my MSc
 % Implemented a lite FTP server and a client with C++ socket.
 % }
 
-\cventry{2008}
-{16-bit FPGA MIPS CPU}
-{VHDL}
-{}{}
-{
-\begin{itemize}
-	\item Designed a five-step pipelining structure.
-	\item Implemented a processor in VHDL.
-	\item Drove several peripherals including audio and video output.
-	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
-	\item Worked as a team leader.	
-\end{itemize}
-}
+% \cventry{2008}
+% {16-bit FPGA MIPS CPU}
+% {VHDL}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item Designed a five-step pipelining structure.
+% 	\item Implemented a processor in VHDL.
+% 	\item Drove several peripherals including audio and video output.
+% 	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
+% 	\item Worked as a team leader.	
+% \end{itemize}
+% }
 
 % \cventry{2008}
 % {Mine Sweeper on FPGA}
@@ -221,9 +229,9 @@ No one has ever made such a template for HKPU thesis. While I was writing my MSc
 
 
 \section{Skills}
-\cventry{Languages}{Used in Working: MATLAB, C++}{Used in Personal Code: Python, Java, R}{}{}{}
+\cventry{Languages}{Used in Working: MATLAB, C++, \LaTeX}{Used in Personal Code: Python, Java, R}{}{}{}
 \cventry{English}{CET-6 652, TOEFL 107}{fluent in spoken and written English}{}{}{}
-% \cventry{Zhihu}{\url{zhihu.com/people/qingpei}}{My questions and answers. (Chinese version of Quora)}{}{}{}
+\cventry{Zhihu}{\url{zhihu.com/people/qingpei}}{My questions and answers. (Chinese version of Quora)}{}{}{}
 
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
