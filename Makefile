@@ -3,7 +3,7 @@ SOURCENAME_EN ?= qingpei-en
 PDFDIR ?= pdf
 HTMLDIR ?= html
 TEXCOMMAND ?= latexmk -xelatex -bibtex -outdir=${PDFDIR} -time
-GENHTML ?= pdf2htmlEX --fit-width 900 --single-html 1 --dest-dir ${HTMLDIR} --font-size-multiplier 100 --process-outline 0
+GENHTML ?= pdf2htmlEX --fit-width 900 --embed CFIJO --dest-dir ${HTMLDIR} --font-size-multiplier 100 --process-outline 0
 
 all:	en cn html clean
 
