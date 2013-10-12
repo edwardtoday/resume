@@ -21,6 +21,13 @@
 \XeTeXlinebreakskip = 0pt plus 1pt
 \setlength{\parskip}{0.3cm}	
 
+\usepackage{datetime}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\usepackage{footmisc} % enabling footnotes.
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
 \usepackage[scale=0.8]{geometry}  % adjust the page margins
 \recomputelengths                             % required when changes are made to page layout lengths
 
@@ -260,6 +267,10 @@
 
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\vfill
+\enlargethispage{\footskip}
+\blfootnote{最后更新: \today}
 
 % \clearpage
 % %-----       letter       ---------------------------------------------------------
