@@ -3,24 +3,14 @@
 \moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
-% \usepackage{xunicode, xltxtra}
-% \XeTeXlinebreaklocale "zh"
-% \widowpenalty=10000
-% %\setmainfont[Mapping=tex-text]{文泉驿正黑}
-% \usepackage{CJKutf8}
-% \setmainfont[Mapping=tex-text]{Hiragino Sans GB}
-% \setsansfont[Mapping=tex-text]{Hiragino Sans GB}
-% \CJKtilde
-
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
 \punctstyle{kaiming}
 \setCJKmainfont[BoldFont=FZLanTingHeiS-B-GB]{FZLanTingHeiS-R-GB}
 % \setCJKmainfont[BoldFont=Hiragino Sans GB]{Hiragino Sans GB}
-\setCJKmainfont[BoldFont=Adobe Heiti Std]{Adobe Song Std}
 \setCJKmonofont{Menlo}
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0.5pt plus 1pt
-\setlength{\parskip}{0.3cm}	
+\setlength{\parskip}{0.3cm}
 
 \usepackage{datetime}
 \renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
@@ -51,8 +41,8 @@
 \begin{document}
 \maketitle
 
-\section{求职意向}
-\cvitem{开发工程师}{应用软件、系统前端/后端开发}
+%\section{求职意向}
+%\cvitem{开发工程师}{应用软件、系统前端/后端开发}
 
 \section{教育经历}
 \cventry{2011--2012}{软件科技专业 硕士}{香港理工大学}{香港}{学分绩:3.95/4 获“成绩优异”评价}{}
@@ -65,7 +55,17 @@
 % \cvline{description}{\small Short thesis abstract}
 
 \section{工作经历}
-\cventry{2012至今}{助研}{人体生物特征识别研究中心}{香港理工大学计算学系}{}
+\cventry{2013--present}{软件工程师}{上海三思电子工程有限公司}{上海}{}
+{
+\begin{itemize}
+	\item 独立完成LED显示屏、路灯控制系统的网络通信模块。对TCP/UDP及串口（RS-485）通信提供统一的接口。
+	\item 改进内部显示屏校正软件，从成像和视觉原理出发设计校正算法，并做出一个比此前快30倍的系统实现。
+	\item 将Git版本控制引入开发流程，优化组内协同工作流程和效率。
+	\item 提议并实施公司大量低占用率物理服务器向虚拟化方案的迁移，降低成本，方便管理，同时为内部其他部门以及客户提供更稳定安全的服务。
+\end{itemize}
+}
+
+\cventry{2012--2013}{助研}{人体生物特征识别研究中心}{香港理工大学计算学系}{}
 {
 \begin{description}
 	\item[研究对象：] 健康与糖尿病人的脉搏采样、心电图、舌头图像、呼吸气体成分测试结果、脸部照片等多种数据。
@@ -218,19 +218,19 @@
 % Implemented a lite FTP server and a client with C++ socket.
 % }
 
-\cventry{2008}
-{16位MIPS指令集CPU的FPGA实现}
-{VHDL}
-{}{}
-{
-\begin{itemize}
-	\item 设计了五级流水线结构。
-	\item 用VHDL实现了一个MIPS CPU。
-	\item 驱动了包括VGA显示器和PS/2鼠标、键盘在内的外设。
-	\item 处理器主频在Cyclone II FPGA上可达50MHz.
-	\item 任3人团队的组长。	
-\end{itemize}
-}
+%\cventry{2008}
+%{16位MIPS指令集CPU的FPGA实现}
+%{VHDL}
+%{}{}
+%{
+%\begin{itemize}
+%	\item 设计了五级流水线结构。
+%	\item 用VHDL实现了一个MIPS CPU。
+%	\item 驱动了包括VGA显示器和PS/2鼠标、键盘在内的外设。
+%	\item 处理器主频在Cyclone II FPGA上可达50MHz.
+%	\item 任3人团队的组长。
+%\end{itemize}
+%}
 
 % \cventry{2008}
 % {扫雷游戏的FPGA实现}
@@ -282,17 +282,17 @@
 % \closing{Yours faithfully,}
 % \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 % \makelettertitle
-% 
+%
 % Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-% 
+%
 % Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-% 
+%
 % Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-% 
+%
 % Albert Einstein discovered that $e=mc^2$ in 1905.
-% 
+%
 % \[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-% 
+%
 % \makeletterclosing
 
 \end{document}

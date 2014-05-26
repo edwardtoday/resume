@@ -3,10 +3,11 @@
 \moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
+\usepackage[T1]{fontenc}
 \usepackage{fontspec}
-\setmainfont{Palatino}
-\setmonofont{Monaco}
-\setsansfont{Helvetica}
+\setmainfont{Fontin Sans CR}
+\setmonofont{Menlo}
+\setsansfont{Fontin Sans CR}
 
 \usepackage[us]{datetime}
 \usepackage{footmisc} % enabling footnotes.
@@ -46,13 +47,23 @@
 % \cvline{description}{\small Short thesis abstract}
 
 \section{Experience}
-\cventry{2012--present}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{Hong Kong}{}
+\cventry{2013--present}{Software Engineer}{Shanghai Sansi Technology Co., Ltd.}{Shanghai}{}
+{
+\begin{itemize}
+	\item Independently wrote the networking module of LED display/lamp control system. Unified interface provided for TCP/UDP and serial port (RS-485).
+	\item Revised display calibration software with a more systematical approach and a much faster (30X) implementation.
+	\item Refined teamwork process by introducing version control with git to colleagues.
+	\item Initiated the transition from dozens of low-utilization physical servers to a lower-cost, easily-managed, more robust virtualization solution. 
+\end{itemize}
+}
+
+\cventry{2012--2013}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{Hong Kong}{}
 {
 \begin{description}
 	\item[Data Source:] Samples of pulse, electrocardiogram, tongue photo, front face photo and breath composition analysis results from both healthy and diabetes people.
 	\item[Objective:] To discover if some disease (diabetes in this case) has strong correlation with multiple physical signs of human body. Build a diagnosis model bases on the correlation to improve accuracy and consistency of diagnoses.
 	\item[Methodology:] Iterations of ``Feature Extraction $\rightarrow$ Fusion of Multiple Features $\rightarrow$ Feature Optimization $\rightarrow$ Machine Learning $\rightarrow$ Model Simplification'' process.
-	\item[Current Status:]  We achieved an accuracy of 97.1\% of diabetes diagnosis. By contrast, the accuracy using a single source of physical signs were 65\% to 90\%. Thus we have lowered the misdiagnosis rate by roughly an order of magnitude.
+	\item[Current Status:]  We achieved an accuracy of 97.1\% of diabetes diagnosis. By contrast, the accuracy using a single source of physical signs were 65\% to 90\%. Thus we have lowered the mis-diagnosis rate by roughly an order of magnitude.
 \end{description}
 }
 
@@ -200,19 +211,19 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 % Implemented a lite FTP server and a client with C++ socket.
 % }
 
-\cventry{2008}
-{16-bit FPGA MIPS CPU}
-{VHDL}
-{}{}
-{
-\begin{itemize}
-	\item Designed a five-step pipelining structure.
-	\item Implemented a processor in VHDL.
-	\item Drove several peripherals including audio and video output.
-	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
-	\item Worked as a team leader.	
-\end{itemize}
-}
+%\cventry{2008}
+%{16-bit FPGA MIPS CPU}
+%{VHDL}
+%{}{}
+%{
+%\begin{itemize}
+%	\item Designed a five-step pipelining structure.
+%	\item Implemented a processor in VHDL.
+%	\item Drove several peripherals including audio and video output.
+%	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
+%	\item Worked as a team leader.	
+%\end{itemize}
+%}
 
 % \cventry{2008}
 % {Mine Sweeper on FPGA}
