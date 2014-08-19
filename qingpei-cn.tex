@@ -1,15 +1,19 @@
-\documentclass[10pt,a4paper]{moderncv/moderncv}
+\documentclass[11pt,a4paper]{moderncv/moderncv}
 
 \moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
+\xeCJKsetup{PunctStyle=hangmobanjiao}
 \punctstyle{kaiming}
-\setCJKmainfont[BoldFont=FZLanTingHeiS-B-GB]{FZLanTingHeiS-R-GB}
-% \setCJKmainfont[BoldFont=Hiragino Sans GB]{Hiragino Sans GB}
+%\setCJKmainfont[BoldFont=FZLanTingHeiS-B-GB]{FZLanTingHeiS-R-GB}
+\setCJKmainfont[BoldFont=Lantinghei SC Demibold]{FZNewShuSong-Z10}
+%\setCJKmainfont[BoldFont=Hiragino Sans GB]{Hiragino Sans GB}
+
 \setCJKmonofont{Menlo}
 \XeTeXlinebreaklocale "zh"
-\XeTeXlinebreakskip = 0.5pt plus 1pt
+\XeTeXlinebreakskip = 0.5pt plus 1pt minus 0.1pt
+\linespread{1.15} 						% 行间距
 \setlength{\parskip}{0.3cm}
 
 \usepackage{datetime}
@@ -33,10 +37,10 @@
 \social[github]{edwardtoday}
 \homepage{qingpei.me}
 
-\photo[64pt][0.35pt]{img/side.jpg}
+% \photo[64pt][0.35pt]{img/side.jpg}
 % \quote{``Do what you fear, and the death of fear is certain.''\\-- Anthony Robbins}
 
-\nopagenumbers{}            % uncomment to suppress automatic page numbering for CVs longer than one page
+% \nopagenumbers{}            % uncomment to suppress automatic page numbering for CVs longer than one page
 
 \begin{document}
 \maketitle
@@ -55,22 +59,22 @@
 % \cvline{description}{\small Short thesis abstract}
 
 \section{工作经历}
-\cventry{2013--present}{软件工程师}{上海三思电子工程有限公司}{上海}{}
+\cventry{2013--present}{软件工程师}{上海三思电子科技有限公司}{上海}{}
 {
 \begin{itemize}
-	\item 独立完成LED显示屏、路灯控制系统的网络通信模块。对TCP/UDP及串口（RS-485）通信提供统一的接口。
-	\item 改进内部显示屏校正软件，从成像和视觉原理出发设计校正算法，并做出一个比此前快30倍的系统实现。
-	\item 将Git版本控制引入开发流程，优化组内协同工作流程和效率。
-	\item 提议并实施公司大量低占用率物理服务器向虚拟化方案的迁移，降低成本，方便管理，同时为内部其他部门以及客户提供更稳定安全的服务。
+	\item 独立完成LED显示屏、路灯控制系统的网络通信模块。对TCP/UDP及串口（RS-485）控制器通信提供统一的接口。通过异步设计，\textbf{吞吐量比旧版提升6倍}。
+	\item 改进内部显示屏校正软件，从成像和视觉原理出发设计校正算法，系统实现比此前\textbf{快30倍}。
+	\item 搭建内网GitLab服务器，将Git版本控制引入开发流程；同时促使同事用Redmine代替项目管理上的的口头沟通，优化组内协同工作流程和效率。
+	\item 提议并迁移公司7台低占用率服务器至虚拟化方案，降低成本，方便管理。
 \end{itemize}
 }
 
 \cventry{2012--2013}{助研}{人体生物特征识别研究中心}{香港理工大学计算学系}{}
 {
 \begin{description}
-	\item[研究对象：] 健康与糖尿病人的脉搏采样、心电图、舌头图像、呼吸气体成分测试结果、脸部照片等多种数据。
+	\item[研究对象：] 健康与糖尿病人的脉搏、心电图、舌相、呼吸气体成分、脸部照片等数据。
 	\item[研究目的：] 寻找疾病（以糖尿病为例）与多种体征之间有无强相关性，并利用存在的相关性建立诊断模型，提高诊断的准确性与一致性。
-	\item[研究方法：] 多次迭代``特征提取$\rightarrow$多种特征融合$\rightarrow$特征优化$\rightarrow$机器学习$\rightarrow$模型简化''的过程。
+	\item[研究方法：] 多次迭代``特征提取$\rightarrow$特征融合$\rightarrow$特征优化$\rightarrow$机器学习$\rightarrow$模型简化''的过程。
 	\item[当前成果：] 我们在400余人的采样上做到糖尿病诊断97.1\%的准确率。作为对比，仅利用单一类型数据特征建立的诊断模型，准确率在65\%到90\%不等。我们已经将模型的误诊率降低了大约一个数量级。
 \end{description}
 }
@@ -78,27 +82,27 @@
 \cventry{2010--2011}{软件工程师}{上海维塔士软件科技公司}{上海}{}
 {
 \begin{itemize}
-	\item 从零开始设计并实现了一个跨PC/Mac/iOS系统的航海游戏。独立完成帧率优化，将iPhone 4平台的帧率从引擎默认设定下的12fps提高至35fps
-	\item 用C++/Python打造内部协同工作工具，简化美工与技术部门交接工作的流程，降低解决冲突的成本
-	\item 协调程序团队与美工团队的工作，帮助团队在全年项目中向客户按时交付每一个版本，无一推迟
-	\item 担任公司iPhone/iPad实验项目开发团队负责人，带领5人团队从零开始学习运用新技术按计划完成项目，吸引3家客户与公司合作该平台新项目
+	\item 从零开始设计并实现了一个跨PC/Mac/iOS系统的航海游戏。独立完成帧率优化，将iPhone 4平台的帧率从引擎默认设定下的12fps提高至35fps。
+	\item 内部协同工具（C++/Python），简化美工与技术部门交接流程，降低冲突解决成本。
+	\item 协调程序与美工团队的工作，在全年三个项目中向客户按时交付每一个版本，无一延期。
+	\item 负责iPhone/iPad实验项目开发，带领5人团队从零开始学习运用新技术按计划完成项目，吸引3家客户与公司合作该平台新项目。
 \end{itemize}
 }
 
-\cventry{2009}{实习程序员}{上海恩德斯豪斯自动化设备有限公司}{上海}{}
-{
-\begin{itemize}
-	\item 用Modo建立产品3D模型。
-	\item 提议并用Java设计实现了基于3D模型的设备选型系统，以利于市场部向客户展示。
-\end{itemize}
-}
+%\cventry{2009}{实习程序员}{上海恩德斯豪斯自动化设备有限公司}{上海}{}
+%{
+%\begin{itemize}
+%	\item 用Modo建立产品3D模型。
+%	\item 提议并用Java设计实现了基于3D模型的设备选型系统，以利于市场部向客户展示。
+%\end{itemize}
+%}
 
 \cventry{2008}{志愿者，事务助理}{第29届奥运会国际广播中心}
 {北京}{}
 {
 \begin{itemize}
-	\item 协调相应部门志愿者满足各国媒体的工作需求，或汇报部门主管寻求外部资源解决问题
-	\item 负责场馆工作人员考勤、汇总并发送每日运营情况报表
+	\item 协调相应部门志愿者满足各国媒体的工作需求，或汇报部门主管寻求外部资源解决问题。
+	\item 负责场馆工作人员考勤、汇总并发送每日运营情况报表。
 \end{itemize}
 }
 
@@ -106,19 +110,19 @@
 {北京}{}
 {
 \begin{itemize}
-	\item 组织外联部成员联系在京系友并保持联络
-	\item 向各方寻求赞助以覆盖系内学生活动、迎新晚会的支出
+	\item 组织外联部成员联系在京系友并保持联络。
+	\item 向各方寻求赞助以覆盖系内学生活动、迎新晚会的支出。
 \end{itemize}
 }
 
 \section{项目经验}
-\cventry{2013}
-{image-converter-for-kindle}
-{Python}
-{}{}
-{
-自动缩放、裁剪、旋转、优化图片，以便在Kindle的电子墨水屏幕上更好地显示。
-}
+%\cventry{2013}
+%{image-converter-for-kindle}
+%{Python}
+%{}{}
+%{
+%自动缩放、裁剪、旋转、优化图片，以便在Kindle的电子墨水屏幕上更好地显示。
+%}
 
 % \cventry{2013}
 % {mymaxim}
@@ -171,17 +175,17 @@
 \end{itemize}
 }
 
-\cventry{2009}
-{智能视频处理}
-{C++}
-{}{}
-{
-\begin{itemize}
-	\item 实现meanshift、GrabCut等算法，用作图像预处理。
-	\item 修改GrabCut算法，将人机交互过程取消，用边缘检测代替其原有功能，实现全自动图像分割和物体数据库的建立。
-	\item 每周组会介绍一个算法，包括: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
-\end{itemize}
-}
+%\cventry{2009}
+%{视频智能处理}
+%{C++}
+%{}{}
+%{
+%\begin{itemize}
+%	\item 实现meanshift、GrabCut等算法，用作图像预处理。
+%	\item 修改GrabCut算法，将人机交互过程取消，用边缘检测代替其原有功能，实现全自动图像分割和物体数据库的建立。
+%	\item 每周组会介绍一个算法，包括: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
+%\end{itemize}
+%}
 
 \cventry{2009}
 {光线跟踪渲染器及模型网格简化系统}
@@ -192,7 +196,7 @@
 	\item 用C++实现Phong模型光线跟踪渲染器。
 	\item 渲染速度在课程全部学生的前10\%。
 	\item 同时实现顶点删除和边折叠算法的网格简化代码，支持将网格简化至任意自定义复杂度。
-	\item 用OpenGL提供简化后网格的实时预览。
+%	\item 用OpenGL提供简化后网格的实时预览。
 \end{itemize}
 }
 
@@ -256,9 +260,8 @@
 \cvitem{数据分析}{熟练使用Excel制表，掌握计算机辅助数据分析，能够编写程序解决实际问题}
 \cvitem{英语}{英语流利对话、读写，曾在国家级、省级英语竞赛获奖；CET-6 652分, TOEFL 107分}
 % \cvitem{驾驶}{C1驾照，4年驾龄，无扣分记录、无事故记录}
-% \cvitem{摄影摄像}{帮多位朋友拍摄证件照、肖像；03年以来负责拍摄记录班级集体活动照片与纪录短片}
-% \cvitem{会计}{目前在准备2014年注册会计师资格考试《会计》、《审计》、《财务成本管理》三个科目}
-\cventry{知乎}{\url{zhihu.com/people/qingpei}}{我在知乎上的回答}{}{}{}
+% \cvitem{摄影摄像}{帮多位朋友拍摄证件照、肖像；2003年以来负责拍摄记录班级集体活动照片与纪录短片}
+% \cventry{知乎}{\url{zhihu.com/people/qingpei}}{我在知乎上的回答}{}{}{}
 
 \section{曾获奖项}
 \cventry{2009}{计算机系优秀学生干部}{清华大学}{}{}{}
@@ -273,26 +276,24 @@
 \enlargethispage{\footskip}
 \blfootnote{最后更新: \today}
 
-% \clearpage
-% %-----       letter       ---------------------------------------------------------
-% % recipient data
-% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-% \date{January 01, 1984}
-% \opening{Dear Sir or Madam,}
-% \closing{Yours faithfully,}
-% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-% \makelettertitle
+%\clearpage
+%%-----       letter       ---------------------------------------------------------
+%% recipient data
+%\recipient{人力资源部}{XX有限公司\\一条街123号\\魔都}
+%\date{\today}
+%\opening{尊敬的X经理，}
+%\closing{此致\\敬礼！}
+%\enclosure[附件]{简历{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
 %
-% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+%本人從「香港日報」中得悉， 貴公司現徵求營業員一名，需有大專以上程度及三年同類工作經驗。本人對是項職位深感興趣，故特致函應徵。
 %
-% Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+%本人畢業於香港中文大學工商管理學系，深具商業方面的知識。而本人於畢業後亦曾於龍圖貿易國際集團任職達三年之久，將本人所學付諸實踐。因此就學業及工作經驗方面，本人均合乎 貴公司的入職要求。
 %
-% Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+%本人具有良好的數理及商業頭腦，曾於九八年度全港商機創業大賽中獲得第三名。本人為人謹慎、處事快及具責任感，相信定能勝任這項工作。
 %
-% Albert Einstein discovered that $e=mc^2$ in 1905.
+%本人素仰 貴公司信譽超卓，若能被 貴公司所錄用，實為本人之榮幸。現隨函附上個人履歷表一份，並希望 貴公司能給予接見機會，以更詳盡地提供本人的資料供 貴公司參考。
 %
-% \[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-%
-% \makeletterclosing
+%\makeletterclosing
 
 \end{document}

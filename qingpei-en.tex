@@ -1,13 +1,13 @@
-\documentclass[10pt,a4paper]{moderncv/moderncv}
+\documentclass[11pt,a4paper]{moderncv/moderncv}
 
 \moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
-\setmainfont{Fontin Sans CR}
+\setmainfont[BoldFont=Myriad Pro Semibold, ItalicFont=Myriad Pro Italic]{Myriad Pro}
 \setmonofont{Menlo}
-\setsansfont{Fontin Sans CR}
+%\setsansfont{Arial}
 
 \usepackage[us]{datetime}
 \usepackage{footmisc} % enabling footnotes.
@@ -31,13 +31,17 @@
 
 % \quote{``Do what you fear, and the death of fear is certain.''\\-- Anthony Robbins}
 
-\nopagenumbers{}            % uncomment to suppress automatic page numbering for CVs longer than one page
+% \nopagenumbers{}            % uncomment to suppress automatic page numbering for CVs longer than one page
 
 \begin{document}
 \maketitle
 
+
+%\section{Objective}
+%\cvitem{Software Devoloper}{Networking, Data Processing}
+
 \section{Education}
-\cventry{2011--2012}{M.Sc. in Software Technology}{The Hong Kong Polytechnic University}{Hong Kong}{GPA:3.95/4 \textbf{with distinction}}{}
+\cventry{2011--2012}{M.Sc. in Software Technology}{The Hong Kong Polytechnic University}{Hong Kong}{GPA:3.95/4 \textbf{with Distinction}}{}
 \cventry{2006--2010}{B.Eng. in Computer Science and Technology}{Tsinghua University}{Beijing}{GPA:85/100}{}
 \cventry{2007--2010}{BS in Economics}{Tsinghua University}{Beijing}{second major}{}
 
@@ -50,10 +54,10 @@
 \cventry{2013--present}{Software Engineer}{Shanghai Sansi Technology Co., Ltd.}{Shanghai}{}
 {
 \begin{itemize}
-	\item Independently wrote the networking module of LED display/lamp control system. Unified interface provided for TCP/UDP and serial port (RS-485).
-	\item Revised display calibration software with a more systematical approach and a much faster (30X) implementation.
-	\item Refined teamwork process by introducing version control with git to colleagues.
-	\item Initiated the transition from dozens of low-utilization physical servers to a lower-cost, easily-managed, more robust virtualization solution. 
+	\item Independently wrote the networking module of LED display/lamp control system. Unified interface provided for TCP/UDP and serial port (RS-485) controllers. \textbf{6X higher throughput} than previous version by asynchronous design.
+	\item Revised display calibration software with a more systematical approach and a \textbf{30X faster} implementation.
+	\item Refined teamwork process by introducing version control with git / GitLab and issue management with Redmine to colleagues.
+	\item Initiated the transition from 7 of low-utilization physical servers to a lower-cost, easily-managed, more robust virtualization solution.
 \end{itemize}
 }
 
@@ -63,27 +67,27 @@
 	\item[Data Source:] Samples of pulse, electrocardiogram, tongue photo, front face photo and breath composition analysis results from both healthy and diabetes people.
 	\item[Objective:] To discover if some disease (diabetes in this case) has strong correlation with multiple physical signs of human body. Build a diagnosis model bases on the correlation to improve accuracy and consistency of diagnoses.
 	\item[Methodology:] Iterations of ``Feature Extraction $\rightarrow$ Fusion of Multiple Features $\rightarrow$ Feature Optimization $\rightarrow$ Machine Learning $\rightarrow$ Model Simplification'' process.
-	\item[Current Status:]  We achieved an accuracy of 97.1\% of diabetes diagnosis. By contrast, the accuracy using a single source of physical signs were 65\% to 90\%. Thus we have lowered the mis-diagnosis rate by roughly an order of magnitude.
+	\item[Current Status:]  We achieved an \textbf{accuracy of 97.1\%} of diabetes diagnosis. By contrast, the accuracy using a single source of physical signs were 65\% to 90\%. Thus we have lowered the mis-diagnosis rate by roughly an order of magnitude.
 \end{description}
 }
 
 \cventry{2010--2011}{Software Developer}{Virtuos Games}{Shanghai}{}
 {
 \begin{itemize}
-	\item Architected and implemented a cross-platform game on both PC/Mac and iPhone/iPad. In charge of the graphics performance optimization.
+	\item Architected and implemented a cross-platform game on both PC/Mac and iPhone/iPad. Optimized the graphics performance from \textbf{14FPS to 31FPS} on iPhone 4.
 	\item Designed synchronization tool with C++/Python to improve inter-department cooperation.
 	\item Acted as communicator between Technical and Art department to smooth out interdepartmental tasks.
 	\item Acted as technical leader of internal iOS project. My demonstration attracted 3 clients to sign contracts with Virtuos on new iOS projects.
 \end{itemize}
 }
 
-\cventry{2009}{Intern Programmer}{Endress+Hauser}{Shanghai}{}
-{
-\begin{itemize}
-	\item Designed 3D models with Modo to present previews of customized products.
-	\item Proposed and designed a product customization software with dynamic help for each part.
-\end{itemize}
-}
+%\cventry{2009}{Intern Programmer}{Endress+Hauser}{Shanghai}{}
+%{
+%\begin{itemize}
+%	\item Designed 3D models with Modo to present previews of customized products.
+%	\item Proposed and designed a product customization software with dynamic help for each part.
+%\end{itemize}
+%}
 
 \cventry{2008}{Volunteer, Assistant Officer}{International Broadcast Center, $29$th Olympic Games}
 {Beijing}{}
@@ -94,14 +98,14 @@
 \end{itemize}
 }
 
-\cventry{2007-2009}{Vice Director, Director}{Liaison Department, Student Union of Dept., Tsinghua University}
-{Beijing}{}
-{
-\begin{itemize}
-	\item Coordinated actions on seeking sponsors for student activities.
-	\item Raised money for freshman orientation party.
-\end{itemize}
-}
+%\cventry{2007-2009}{Vice Director, Director}{Liaison Department, Student Union of Dept., Tsinghua University}
+%{Beijing}{}
+%{
+%\begin{itemize}
+%	\item Coordinated actions on seeking sponsors for student activities.
+%	\item Raised money for freshman orientation party.
+%\end{itemize}
+%}
 
 \section{Projects}
 
@@ -120,7 +124,7 @@ Resize, crop, rotate and optimize images for the e-ink screen on Kindle.
 % {
 % A script that shows random maxims on my personal site.
 % }
-% 
+%
 \cventry{2012}
 {hkputhesis: The Hong Kong Polytechnic University M.Sc. thesis latex template}
 {LaTeX}
@@ -135,7 +139,7 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 {}{}
 {
 \begin{itemize}
-	\item Achieved a world leading 98.7\% identification accuracy using 3D palm-print features. (Accuracies found in previous literature were less than 93\%.)
+	\item Achieved a \textbf{worldwide leading 98.7\%} identification accuracy using 3D palm-print features. (Accuracies found in previous literature were less than 93\%.)
 	\item 2X speedup (compared to searching sorted database) gained by utilizing 3D global feature index.
 \end{itemize}
 }
@@ -164,17 +168,17 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 % \end{itemize}
 % }
 
-\cventry{2009}
-{Intelligent Video Processing}
-{C++}
-{}{}
-{
-\begin{itemize}
-	\item Implemented mean shift, GrabCut as pre-processors in the image processing chain.
-	\item Modified GrabCut by replacing user interaction with edge detection to achieve automatic object library creation.
-	\item Gave presentations in weekly discussion on the following paper: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
-\end{itemize}
-}
+%\cventry{2009}
+%{Intelligent Video Processing}
+%{C++}
+%{}{}
+%{
+%\begin{itemize}
+%	\item Implemented mean shift, GrabCut as pre-processors in the image processing chain.
+%	\item Modified GrabCut by replacing user interaction with edge detection to achieve automatic object library creation.
+%	\item Gave presentations in weekly discussion on the following paper: ARDECO, Interactive Video Cutout, Photo Clip Art, Video Object Cut and Paste.
+%\end{itemize}
+%}
 
 \cventry{2009}
 {Ray-tracing Renderer and Mesh Simplification}
@@ -183,7 +187,7 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 {{
 \begin{itemize}
 	\item Implemented a C++ ray-tracing renderer with Phong model.
-	\item Top 10\% by rendering speed in class.
+	\item \textbf{Top 10\%} by rendering speed in class.
 	\item Implemented both vertex decimation and edge contraction algorithms to simplify a mesh to a customizable complexity.
 	\item Provided real-time preview of simplification progress with OpenGL.
 \end{itemize}}
@@ -221,7 +225,7 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 %	\item Implemented a processor in VHDL.
 %	\item Drove several peripherals including audio and video output.
 %	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
-%	\item Worked as a team leader.	
+%	\item Worked as a team leader.
 %\end{itemize}
 %}
 
@@ -246,7 +250,7 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 \cvitem{Keynote}{Proficient in making readable and clear slides using Apple Keynote or Microsoft PowerPoint. Experienced in delivering presentations.}
 \cvitem{Data Analyzing}{Good at computer aided data analysis tools such as Excel, GNU R. Able to write programs to process and interpret data.}
 \cvitem{English}{Fluent in spoken and written English, CET-6 652, TOEFL 107}
-\cvitem{Zhihu}{\url{zhihu.com/people/qingpei}, My questions and answers. (Chinese version of Quora)}
+%\cvitem{Zhihu}{\url{zhihu.com/people/qingpei}, My questions and answers. (Chinese version of Quora)}
 
 \section{Awards}
 \cventry{2009}{Outstanding Student Leaders in Department of Computer Science and Technology}{Tsinghua University}{}{}{}
@@ -261,26 +265,32 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 \enlargethispage{\footskip}
 \blfootnote{Last updated: \today}
 
-% \clearpage
-% %-----       letter       ---------------------------------------------------------
-% % recipient data
-% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-% \date{January 01, 1984}
-% \opening{Dear Sir or Madam,}
-% \closing{Yours faithfully,}
-% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-% \makelettertitle
-% 
-% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-% 
-% Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-% 
-% Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-% 
-% Albert Einstein discovered that $e=mc^2$ in 1905.
-% 
-% \[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-% 
-% \makeletterclosing
+%\clearpage
+%%-----       letter       ---------------------------------------------------------
+%% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{\today}
+%\opening{Dear Sir or Madam,}
+%\closing{Respectfully yours,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+%
+%Body of Cover Letter
+%
+%The body of your cover letter lets the employer know what position you are applying for, why the employer should select you for an interview, and how you will follow-up.
+%
+%First Paragraph:
+%
+%The first paragraph of your letter should include information on why you are writing. Mention the position you are applying for. Include the name of a mutual contact, if you have one. Be clear and concise regarding your request. Convince the reader that they should grant the interview or appointment you requested in the first paragraph.
+%
+%Middle Paragraphs:
+%
+%The next section of your cover letter should describe what you have to offer the employer. Make strong connections between your abilities and their needs. Mention specifically how your skills and experience match the job you are applying for. Remember, you are interpreting your resume, not repeating it. Try to support each statement you make with a piece of evidence. Use several shorter paragraphs or bullets rather than one large block of text.
+%
+%Final Paragraph:
+%
+%Conclude your cover letter by thanking the employer for considering you for the position. Include information on how you will follow-up. State that you will do so and indicate when (one week's time is typical). You may want to reduce the time between sending out your resume and follow up if you fax or e-mail it.
+%
+%\makeletterclosing
 
 \end{document}
