@@ -3,12 +3,17 @@
 \moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
+% English fonts
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\setmainfont[BoldFont=Myriad Pro Bold, ItalicFont=Myriad Pro Italic]{Myriad Pro}
+\setmonofont{Menlo}
+\setsansfont{Arial}
+
 \usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
 \xeCJKsetup{PunctStyle=hangmobanjiao}
 \punctstyle{kaiming}
-%\setCJKmainfont[BoldFont=Hiragino Sans GB]{Hiragino Sans GB}
-\setCJKmainfont[BoldFont=Lantinghei SC Demibold]{XinGothic-ZhangYue W4}
-
+\setCJKmainfont[BoldFont=Lantinghei SC Demibold]{Heiti SC Light}
 \setCJKmonofont{Menlo}
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0.5pt plus 1pt minus 0.1pt
@@ -31,7 +36,7 @@
 \email{hello@qingpei.me}
 %\email{edward.qing@gmail.com}
 %\email{edwardtoday@gmail.com}
-\phone[mobile]{+86 18621110317}
+\phone[mobile]{+86 186-2111-0317}
 
 
 \social[github]{edwardtoday}
@@ -51,7 +56,7 @@
 \section{教育经历}
 \cventry{2011--2012}{软件科技专业 硕士}{香港理工大学}{香港}{学分绩:3.95/4 获“成绩优异”评价}{}
 \cventry{2006--2010}{计算机科学与技术专业 学士}{清华大学}{北京}{学分绩:85/100}{}
-\cventry{2007--2010}{经济学 学士}{清华大学}{北京}{二学位}{}
+\cventry{2007--2010}{经济学 学士}{清华大学}{北京}{双学位}{}
 
 % \section{Master thesis}
 % \cvline{title}{\emph{Title}}
@@ -62,6 +67,7 @@
 \cventry{2013--present}{软件工程师}{上海三思电子科技有限公司}{上海}{}
 {
 \begin{itemize}
+	\item 智能球泡灯 iOS 客户端。立项后32天做出首个可用的演示版本，其中前两周时间用于学习 Objective-C。
 	\item 独立完成LED显示屏、路灯控制系统的网络通信模块。对TCP/UDP及串口（RS-485）控制器通信提供统一的接口。通过异步设计，\textbf{吞吐量比旧版提升6倍}。
 	\item 改进内部显示屏校正软件，从成像和视觉原理出发设计校正算法，系统实现比此前\textbf{快30倍}。
 	\item 搭建内网GitLab服务器，将Git版本控制引入开发流程；同时促使同事用Redmine代替项目管理上的的口头沟通，优化组内协同工作流程和效率。
@@ -84,8 +90,8 @@
 \begin{itemize}
 	\item 从零开始设计并实现了一个跨PC/Mac/iOS系统的航海游戏。独立完成帧率优化，将iPhone 4平台的帧率从引擎默认设定下的12fps提高至35fps。
 	\item 内部协同工具（C++/Python），简化美工与技术部门交接流程，降低冲突解决成本。
-	\item 协调程序与美工团队的工作，在全年三个项目中向客户按时交付每一个版本，无一延期。
-	\item 负责iPhone/iPad实验项目开发，带领5人团队从零开始学习运用新技术按计划完成项目，吸引3家客户与公司合作该平台新项目。
+	% \item 协调程序与美工团队的工作，在全年三个项目中向客户按时交付每一个版本，无一延期。
+	% \item 负责iPhone/iPad实验项目开发，带领5人团队从零开始学习运用新技术按计划完成项目，吸引3家客户与公司合作该平台新项目。
 \end{itemize}
 }
 
@@ -115,26 +121,26 @@
 %\end{itemize}
 %}
 
-\section{项目经验}
-%\cventry{2013}
-%{image-converter-for-kindle}
-%{Python}
-%{}{}
-%{
-%自动缩放、裁剪、旋转、优化图片，以便在Kindle的电子墨水屏幕上更好地显示。
-%}
+\section{个人项目}
+\cventry{2013}
+{image-converter-for-kindle}
+{Python}
+{}{}
+{
+自动缩放、裁剪、旋转、优化图片，以便在Kindle的电子墨水屏幕上更好地显示。
+}
 
-% \cventry{2013}
-% {mymaxim}
-% {Javascript}
-% {}{}
-% {
-% 在我的个人网站上随机显示名言的脚本。
-% }
+\cventry{2013}
+{mymaxim}
+{Javascript}
+{}{}
+{
+在我的个人网站上随机显示名言的脚本。
+}
 
 \cventry{2012}
 {hkputhesis: 香港理工大学计算学系硕士论文\LaTeX 模板}
-{LaTeX}
+{\LaTeX}
 {}{}
 {
 在此之前没有人做过这样一个模板。我写硕士论文期间，把自己写的模板整理出来并开源，方便将来有需要的人。
@@ -200,19 +206,19 @@
 \end{itemize}
 }
 
-\cventry{2009}
-{PhoneMe: 跨平台通讯录}
-{Java}
-{软件工程课程项目}{排名 2/50+}
-{
-\begin{itemize}
-	\item 草拟并维护需求文档、设计文档和技术文档。
-	\item 在16,000行项目代码中提交了其中30\%。
-	\item 分配组内任务，并跟踪每日进度。
-	\item 每周组织小组讨论，避免组员间的任务冲突与对项目细节的不同理解。
-	\item 任3人团队的组长。
-\end{itemize}
-}
+% \cventry{2009}
+% {PhoneMe: 跨平台通讯录}
+% {Java}
+% {软件工程课程项目}{排名 2/50+}
+% {
+% \begin{itemize}
+% 	\item 草拟并维护需求文档、设计文档和技术文档。
+% 	\item 在16,000行项目代码中提交了其中30\%。
+% 	\item 分配组内任务，并跟踪每日进度。
+% 	\item 每周组织小组讨论，避免组员间的任务冲突与对项目细节的不同理解。
+% 	\item 任3人团队的组长。
+% \end{itemize}
+% }
 
 % \cventry{2009}
 % {简单FTP服务器与客户端}
@@ -222,19 +228,19 @@
 % Implemented a lite FTP server and a client with C++ socket.
 % }
 
-%\cventry{2008}
-%{16位MIPS指令集CPU的FPGA实现}
-%{VHDL}
-%{}{}
-%{
-%\begin{itemize}
-%	\item 设计了五级流水线结构。
-%	\item 用VHDL实现了一个MIPS CPU。
-%	\item 驱动了包括VGA显示器和PS/2鼠标、键盘在内的外设。
-%	\item 处理器主频在Cyclone II FPGA上可达50MHz.
-%	\item 任3人团队的组长。
-%\end{itemize}
-%}
+\cventry{2008}
+{16位MIPS指令集CPU的FPGA实现}
+{VHDL}
+{}{}
+{
+\begin{itemize}
+	\item 设计了五级流水线结构。
+	\item 用VHDL实现了一个MIPS CPU。
+	\item 驱动了包括VGA显示器和PS/2鼠标、键盘在内的外设。
+	\item 处理器主频在Cyclone II FPGA上可达50MHz.
+	\item 任3人团队的组长。
+\end{itemize}
+}
 
 % \cventry{2008}
 % {扫雷游戏的FPGA实现}
@@ -255,19 +261,19 @@
 
 
 \section{工作技能}
-\cvitem{计算机语言}{工作中使用: MATLAB, C++, \LaTeX； 个人项目使用: Python, Java, R}
+\cvitem{计算机语言}{工作中使用: C++, Objective-C, MATLAB, \LaTeX； 个人项目使用: Python, Java, R}
 \cvitem{演示文稿}{擅长用Apple Keynote、Powerpoint制作可读性高、重点突出的演示文稿}
 \cvitem{数据分析}{熟练使用Excel制表，掌握计算机辅助数据分析，能够编写程序解决实际问题}
 \cvitem{英语}{英语流利对话、读写，曾在国家级、省级英语竞赛获奖；CET-6 652分, TOEFL 107分}
-% \cvitem{驾驶}{C1驾照，4年驾龄，无扣分记录、无事故记录}
+% \cvitem{驾驶}{C1驾照，6年驾龄，无扣分记录、无事故记录}
 % \cvitem{摄影摄像}{帮多位朋友拍摄证件照、肖像；2003年以来负责拍摄记录班级集体活动照片与纪录短片}
 % \cventry{知乎}{\url{zhihu.com/people/qingpei}}{我在知乎上的回答}{}{}{}
 
-\section{曾获奖项}
-\cventry{2009}{计算机系优秀学生干部}{清华大学}{}{}{}
-\cventry{2008}{国际广播中心优秀志愿者}{第29届奥运会北京奥组委}{}{}{}
-\cventry{2006}{上海市海文杯英语竞赛一等奖}{上海市教育委员会}{}{}{}
-\cventry{2004}{21世纪杯全国英语演讲比赛二等奖}{21世纪报社、外教社}{}{}{}
+% \section{曾获奖项}
+% \cventry{2009}{计算机系优秀学生干部}{清华大学}{}{}{}
+% \cventry{2008}{国际广播中心优秀志愿者}{第29届奥运会北京奥组委}{}{}{}
+% \cventry{2006}{上海市海文杯英语竞赛一等奖}{上海市教育委员会}{}{}{}
+% \cventry{2004}{21世纪杯全国英语演讲比赛二等奖}{21世纪报社、外教社}{}{}{}
 
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists

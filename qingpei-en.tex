@@ -1,13 +1,14 @@
-\documentclass[11pt,a4paper]{moderncv/moderncv}
+\documentclass[10pt,a4paper]{moderncv/moderncv}
 
 \moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{grey}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
-\setmainfont[BoldFont=Myriad Pro Semibold, ItalicFont=Myriad Pro Italic]{Myriad Pro}
+\setmainfont[BoldFont=Myriad Pro Bold, ItalicFont=Myriad Pro Italic]{Myriad Pro}
+% \setmainfont{Noto Sans}
 \setmonofont{Menlo}
-%\setsansfont{Arial}
+\setsansfont{Arial}
 
 \usepackage[us]{datetime}
 \usepackage{footmisc} % enabling footnotes.
@@ -15,8 +16,8 @@
 \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
 \makeatother
 
-\usepackage[scale=0.83]{geometry}  % adjust the page margins
-\recomputelengths                             % required when changes are made to page layout lengths
+\usepackage[scale=0.72]{geometry}  % adjust the page margins
+\recomputelengths                  % required when changes are made to page layout lengths
 
 % personal data
 \firstname{\textbf{Pei}}
@@ -24,7 +25,7 @@
 \email{hello@qingpei.me}
 %\email{edward.qing@gmail.com}
 %\email{edwardtoday@gmail.com}
-\phone[mobile]{+86 18621110317}
+\phone[mobile]{+86 186-2111-0317}
 
 
 \social[github]{edwardtoday}
@@ -42,27 +43,23 @@
 %\cvitem{Software Devoloper}{Networking, Data Processing}
 
 \section{Education}
-\cventry{2011--2012}{M.Sc. in Software Technology}{The Hong Kong Polytechnic University}{Hong Kong}{GPA:3.95/4 \textbf{with Distinction}}{}
+\cventry{2011--2012}{M.Sc. in Software Technology}{The Hong Kong Polytechnic University}{}{GPA:3.95/4 with Distinction}{}
 \cventry{2006--2010}{B.Eng. in Computer Science and Technology}{Tsinghua University}{Beijing}{GPA:85/100}{}
-\cventry{2007--2010}{BS in Economics}{Tsinghua University}{Beijing}{second major}{}
+\cventry{2007--2010}{B.S. in Economics}{Tsinghua University}{Beijing}{dual degree}{}
 
-% \section{Master thesis}
-% \cvline{title}{\emph{Title}}
-% \cvline{supervisors}{Supervisors}
-% \cvline{description}{\small Short thesis abstract}
-
-\section{Experience}
+\section{Working Experience}
 \cventry{2013--present}{Software Engineer}{Shanghai Sansi Technology Co., Ltd.}{Shanghai}{}
 {
 \begin{itemize}
-	\item Independently wrote the networking module of LED display/lamp control system. Unified interface provided for TCP/UDP and serial port (RS-485) controllers. \textbf{6X higher throughput} than previous version by asynchronous design.
-	\item Revised display calibration software with a more systematical approach and a \textbf{30X faster} implementation.
-	\item Refined teamwork process by introducing version control with git / GitLab and issue management with Redmine to colleagues.
-	\item Initiated the transition from 7 of low-utilization physical servers to a lower-cost, easily-managed, more robust virtualization solution.
+	\item Smart bulb iOS app. First working demo in 32 days including learning Objective-C for 2 weeks.
+	\item Networking module of LED display/lamp control system. Unified interface for TCP/UDP/RS-485 controllers. \textbf{6X higher throughput} than previous version by asynchronous design.
+	\item Display calibration toolkit optimization. \textbf{30X faster} pixel searching. Better perceived uniformity.
+	\item Advocated the adoption of Git, GitLab \& Redmine within the group.
+	\item Converted 9 low-utilization physical servers to a more maintainable virtual machine.
 \end{itemize}
 }
 
-\cventry{2012--2013}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{Hong Kong}{}
+\cventry{2012--2013}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{}{}
 {
 \begin{description}
 	\item[Data Source:] Samples of pulse, electrocardiogram, tongue photo, front face photo and breath composition analysis results from both healthy and diabetes people.
@@ -75,10 +72,10 @@
 \cventry{2010--2011}{Software Developer}{Virtuos Games}{Shanghai}{}
 {
 \begin{itemize}
-	\item Architected and implemented a cross-platform game on both PC/Mac and iPhone/iPad. Optimized the graphics performance from \textbf{14FPS to 31FPS} on iPhone 4.
-	\item Designed synchronization tool with C++/Python to improve inter-department cooperation.
-	\item Acted as communicator between Technical and Art department to smooth out interdepartmental tasks.
-	\item Acted as technical leader of internal iOS project. My demonstration attracted 3 clients to sign contracts with Virtuos on new iOS projects.
+	\item Architected and implemented a cross-platform game for PC/Mac/iPhone/iPad. Optimized the graphics performance from \textbf{14FPS to 31FPS} on iPhone 4.
+	\item Designed synchronization tool with C++/Python to support inter-department process.
+	% \item Acted as communicator between Technical and Art department to smooth out interdepartmental tasks.
+	% \item Acted as technical leader of internal iOS project. My demonstration attracted 3 clients to sign contracts with Virtuos on new iOS projects.
 \end{itemize}
 }
 
@@ -108,27 +105,27 @@
 %\end{itemize}
 %}
 
-\section{Projects}
+\section{Personal Projects}
 
 \cventry{2013}
-{image-converter-for-kindle: Convert JPEG images to kindle screensaver size}
+{image-converter-for-kindle: Convert JPEG images to kindle screensavers}
 {Python}
 {}{}
 {
 Resize, crop, rotate and optimize images for the e-ink screen on Kindle.
 }
 
-% \cventry{2013}
-% {mymaxim: Show random maxim in my blog posts.}
-% {Javascript}
-% {}{}
-% {
-% A script that shows random maxims on my personal site.
-% }
-%
+\cventry{2013}
+{mymaxim: Show random maxim in my blog posts}
+{Javascript}
+{}{}
+{
+A script that shows random maxims on my personal site.
+}
+
 \cventry{2012}
 {hkputhesis: The Hong Kong Polytechnic University M.Sc. thesis latex template}
-{LaTeX}
+{\LaTeX}
 {}{}
 {
 No one has ever made such a template for HKPU thesis. While I was writing my M.Sc. dissertation, I wrote the template and open-sourced it in case someone needed them in the future.
@@ -158,16 +155,16 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 \end{itemize}
 }
 
-% \cventry{2010}
-% {MIPS CPU Simulator}
-% {Java}
-% {}{}
-% {
-% \begin{itemize}
-% 	\item A simulator that reads assembly code and illustrates how a MIPS CPU would execute it.
-% 	\item States of all registers and memory spaces can be shown.
-% \end{itemize}
-% }
+\cventry{2010}
+{MIPS CPU Simulator}
+{Java}
+{}{}
+{
+\begin{itemize}
+	\item A simulator that reads assembly code and illustrates how a MIPS CPU executes it.
+	\item States of all registers and memory spaces can be shown.
+\end{itemize}
+}
 
 %\cventry{2009}
 %{Intelligent Video Processing}
@@ -194,19 +191,19 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 \end{itemize}}
 }
 
-\cventry{2009}
-{PhoneMe: A cross-platform address book}
-{Java}
-{Software Engineering course project}{ranked 2/50+ students}
-{
-\begin{itemize}
-	\item Drafted and maintained requirements, design and technical document.
-	\item Committed 30\% code of the 16,000-line project.
-	\item Allocated tasks to team members weekly and tracked daily progress and issues.
-	\item Held project discussion weekly to minimize mis-communication costs among members.
-	\item Worked as a team leader.
-\end{itemize}
-}
+% \cventry{2009}
+% {PhoneMe: A cross-platform address book}
+% {Java}
+% {Software Engineering course project}{ranked 2/50+ students}
+% {
+% \begin{itemize}
+% 	\item Drafted and maintained requirements, design and technical document.
+% 	\item Committed 30\% code of the 16,000-line project.
+% 	\item Allocated tasks to team members weekly and tracked daily progress and issues.
+% 	\item Held project discussion weekly to minimize mis-communication costs among members.
+% 	\item Worked as a team leader.
+% \end{itemize}
+% }
 
 % \cventry{2009}
 % {Simple FTP Client and Server}
@@ -216,19 +213,19 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 % Implemented a lite FTP server and a client with C++ socket.
 % }
 
-%\cventry{2008}
-%{16-bit FPGA MIPS CPU}
-%{VHDL}
-%{}{}
-%{
-%\begin{itemize}
-%	\item Designed a five-step pipelining structure.
-%	\item Implemented a processor in VHDL.
-%	\item Drove several peripherals including audio and video output.
-%	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
-%	\item Worked as a team leader.
-%\end{itemize}
-%}
+\cventry{2008}
+{16-bit FPGA MIPS CPU}
+{VHDL}
+{}{}
+{
+\begin{itemize}
+	\item Designed a five-step pipelining structure.
+	\item Implemented a processor in VHDL.
+	\item Drove several peripherals including audio and video output.
+	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
+	\item Worked as a team leader.
+\end{itemize}
+}
 
 % \cventry{2008}
 % {Mine Sweeper on FPGA}
@@ -247,17 +244,17 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 \bibliography{publications}       % 'publications' is the name of a BibTeX file
 
 \section{Skills}
-\cvitem{Programming}{Used in Working: MATLAB, C++, \LaTeX. Used in Personal Code: Python, Java, R}
+\cvitem{Programming}{Used in Working: C++, Objective-C, MATLAB, \LaTeX. Used in Personal Code: Python, Java, R}
 \cvitem{Keynote}{Proficient in making readable and clear slides using Apple Keynote or Microsoft PowerPoint. Experienced in delivering presentations.}
 \cvitem{Data Analyzing}{Good at computer aided data analysis tools such as Excel, GNU R. Able to write programs to process and interpret data.}
 \cvitem{English}{Fluent in spoken and written English, CET-6 652, TOEFL 107}
 %\cvitem{Zhihu}{\url{zhihu.com/people/qingpei}, My questions and answers. (Chinese version of Quora)}
 
-\section{Awards}
-\cventry{2009}{Outstanding Student Leaders in Department of Computer Science and Technology}{Tsinghua University}{}{}{}
-\cventry{2008}{Excellent Volunteer at International Broadcast Center (IBC)}{The Beijing Organizing Committee for the Games of the XXIX Olympiad}{}{}{}
-\cventry{2006}{First Prize in Haiwen Cup Shanghai High-school English Competition}{Shanghai Municipal Education Commission}{}{}{}
-\cventry{2004}{Second Prize in "21st Century Cup" National English Speaking Contest}{Foreign Language Teaching and Research Press}{}{}{}
+% \section{Awards}
+% \cventry{2009}{Outstanding Student Leaders in Department of Computer Science and Technology}{Tsinghua University}{}{}{}
+% \cventry{2008}{Excellent Volunteer at International Broadcast Center (IBC)}{The Beijing Organizing Committee for the Games of the XXIX Olympiad}{}{}{}
+% \cventry{2006}{First Prize in Haiwen Cup Shanghai High-school English Competition}{Shanghai Municipal Education Commission}{}{}{}
+% \cventry{2004}{Second Prize in "21st Century Cup" National English Speaking Contest}{Foreign Language Teaching and Research Press}{}{}{}
 
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
