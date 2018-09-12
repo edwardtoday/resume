@@ -319,18 +319,27 @@
 
 % loads a header variant
 % usage: \moderncvhead[<optional head option>]{<header variant number>}
-\newcommand*{\moderncvhead}[2][]{
-  \expandafter\RequirePackage\expandafter[\expandafter#1\expandafter]{\expandafter moderncvhead\romannumeral #2}}
+\newcommand*{\moderncvhead}[2][]{%
+  \begingroup\edef\x{\endgroup
+    \noexpand\RequirePackage[#1]{moderncvhead\ifcase#2\or i\or ii\or iii\or iv\or v\fi}%
+  }\x 
+}
 
 % loads a body variant
 % usage: \moderncvbody[<optional body option>]{<body variant number>}
-\newcommand*{\moderncvbody}[2][]{
-  \expandafter\RequirePackage\expandafter[\expandafter#1\expandafter]{\expandafter moderncvbody\romannumeral #2}}
+\newcommand*{\moderncvbody}[2][]{%
+  \begingroup\edef\x{\endgroup
+    \noexpand\RequirePackage[#1]{moderncvbody\ifcase#2\or i\or ii\or iii\or iv\or v\fi}%
+  }\x 
+}
 
 % loads a footer variant
 % usage: \moderncvfoot{<footer variant number>}
-\newcommand*{\moderncvfoot}[1]{
-  \expandafter\RequirePackage\expandafter{\expandafter moderncvfoot\romannumeral #1}}
+\newcommand*{\moderncvfoot}[1]{%
+  \begingroup\edef\x{\endgroup
+    \noexpand\RequirePackage{moderncvfoot\ifcase#1\or i\or ii\or iii\or iv\or v\fi}%
+  }\x
+}
   
 % loads a color scheme
 % usage: \moderncvcolor{<color scheme name>}
