@@ -1,7 +1,7 @@
-\documentclass[10pt,a4paper]{moderncv/moderncv}
+\documentclass[11pt,a4paper]{moderncv/moderncv}
 
 \moderncvstyle{classic}       % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{grey}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{blue}          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
@@ -9,14 +9,16 @@
 % \setmainfont{Noto Sans}
 \setmonofont{Menlo}
 \setsansfont{Arial}
+\linespread{1.05} 						% 行间距
+\setlength{\parskip}{0.3cm}
 
 \usepackage[us]{datetime}
-\usepackage{footmisc} % enabling footnotes.
+\usepackage{footmisc} % enabling footnotes.\
 \makeatletter
 \def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
 \makeatother
 
-\usepackage[scale=0.72]{geometry}  % adjust the page margins
+\usepackage[scale=0.82]{geometry}  % adjust the page margins
 \recomputelengths                  % required when changes are made to page layout lengths
 
 % personal data
@@ -29,8 +31,9 @@
 
 
 \social[github]{edwardtoday}
-\homepage{https://www.qingpei.me}
+\homepage{qingpei.me}
 
+% \photo[64pt][0.35pt]{img/side.jpg}
 % \quote{``Do what you fear, and the death of fear is certain.''\\-- Anthony Robbins}
 
 % \nopagenumbers{}            % uncomment to suppress automatic page numbering for CVs longer than one page
@@ -48,36 +51,61 @@
 \cventry{2007--2010}{B.S. in Economics}{Tsinghua University}{Beijing}{dual degree}{}
 
 \section{Working Experience}
-\cventry{2013--present}{Software Engineer}{Shanghai Sansi Technology Co., Ltd.}{Shanghai}{}
+% usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
+
+\cventry{2015--present}{Software Development Team Lead}{\href{http://www.sansi.com/}{Sansitech}}{Shanghai}{}
 {
 \begin{itemize}
-	\item Smart bulb iOS app. First working demo in 32 days including learning Objective-C for 2 weeks.
-	\item Networking module of LED display/lamp control system. Unified interface for TCP/UDP/RS-485 controllers. \textbf{6X higher throughput} than previous version by asynchronous design.
-	\item Display calibration toolkit optimization. \textbf{30X faster} pixel searching. Better perceived uniformity.
-	\item Advocated the adoption of Git, GitLab \& Redmine within the group.
-	\item Converted 9 low-utilization physical servers to a more maintainable virtual machine.
+	\item Work closely with peers in the business to clearly understand requirements.
+	\item Establish annual and quarterly objectives. Guide individuals to clarify quarterly objectives.
+	\item Oversee the technologies and tools used. Introduce better ones when necessary.
+	\item Develop and implement standards and procedures to ensure high quality software. Passed process audits from ISO, GJB and key clients.
+	\item Coach the team to practice version control with Git \& GitLab, continuous integration with GitLab CI, and improve productivity with automated tests and deployments of mobile apps.
+	\item Monitor and guide team members based on behavioral data in GitLab \& Redmine.
+	\item Hire talents to meet the requirements of software apps and platforms from growing business needs and expanding product line.
+	\item Shipped key products on time during 2018 Q1 through Q3 while quits rate surges to 36\%. Regular trainings and efficient configuration management helped.
+\end{itemize}
+}
+
+\cventry{2017}{Head of Product Dev Center, Head of Smart Home Dev Group}{\href{http://www.sansi.com/}{Sansitech}}{Shanghai}{}
+{
+\begin{itemize}
+	\item Plan and develop new LED display products with 6 product managers and 7 functional units.
+	\item Developed 11 LED products in 8 months, including small pixel pitch (P1.25/1.67mm) LED displays, displays for rental/fixed installation use cases, poster display and highway variable message signs.
+	\item Design and implement Wi-Fi smart bulb and ZigBee smart home kit with a hub, bulbs, a remote control and a curtain controller. The team consists of one designer, 6 SDEs and 4 HDEs.
+	% \item 负责团队建设，参与电子、结构、工业设计岗位招聘。
+\end{itemize}
+}
+
+\cventry{2013--2015}{Software Engineer}{\href{http://www.sansi.com/}{Sansitech}}{Shanghai}{}
+{
+\begin{itemize}
+	\item Networking module of LED display/luminaire control system. \textbf{6X higher throughput} than previous version by asynchronous design.
+	\item Optimized LED calibration toolkit to \textbf{30X faster} pixel searching and better perceived uniformity.
+	% \item Advocated the adoption of Git, GitLab \& Redmine within the group.
+	% \item Converted 9 low-utilization physical servers to a more maintainable virtual machine.
 \end{itemize}
 }
 
 \cventry{2012--2013}{Research Assistant}{Biometrics Research Center, The Hong Kong Polytechnic University}{}{}
 {
-\begin{description}
-	\item[Data Source:] Samples of pulse, electrocardiogram, tongue photo, front face photo and breath composition analysis results from both healthy and diabetes people.
-	\item[Objective:] To discover if some disease (diabetes in this case) has strong correlation with multiple physical signs of human body. Build a diagnosis model bases on the correlation to improve accuracy and consistency of diagnoses.
-	\item[Methodology:] Iterations of ``Feature Extraction $\rightarrow$ Fusion of Multiple Features $\rightarrow$ Feature Optimization $\rightarrow$ Machine Learning $\rightarrow$ Model Simplification'' process.
-	\item[Current Status:]  We achieved an \textbf{accuracy of 97.1\%} of diabetes diagnosis. By contrast, the accuracy using a single source of physical signs were 65\% to 90\%. Thus we have lowered the mis-diagnosis rate by roughly an order of magnitude.
-\end{description}
+% \begin{description}
+% 	\item[Data Source:] Samples of pulse, electrocardiogram, tongue photo, front face photo and breath composition analysis results from both healthy and diabetes people.
+% 	\item[Objective:] To discover if some disease (diabetes in this case) has strong correlation with multiple physical signs of human body. Build a diagnosis model bases on the correlation to improve accuracy and consistency of diagnoses.
+% 	\item[Methodology:] Iterations of ``Feature Extraction $\rightarrow$ Fusion of Multiple Features $\rightarrow$ Feature Optimization $\rightarrow$ Machine Learning $\rightarrow$ Model Simplification'' process.
+% 	\item[Current Status:]  We achieved an \textbf{accuracy of 97.1\%} of diabetes diagnosis. By contrast, the accuracy using a single source of physical signs were 65\% to 90\%. Thus we have lowered the mis-diagnosis rate by roughly an order of magnitude.
+% \end{description}
 }
 
-\cventry{2010--2011}{Software Developer}{Virtuos Games}{Shanghai}{}
-{
-\begin{itemize}
-	\item Architected and implemented a cross-platform game for PC/Mac/iPhone/iPad. Optimized the graphics performance from \textbf{14FPS to 31FPS} on iPhone 4.
-	\item Designed synchronization tool with C++/Python to support inter-department process.
-	% \item Acted as communicator between Technical and Art department to smooth out interdepartmental tasks.
-	% \item Acted as technical leader of internal iOS project. My demonstration attracted 3 clients to sign contracts with Virtuos on new iOS projects.
-\end{itemize}
-}
+% \cventry{2010--2011}{Software Developer}{Virtuos Games}{Shanghai}{}
+% {
+% \begin{itemize}
+% 	\item Architected and implemented a cross-platform game for PC/Mac/iPhone/iPad. Optimized the graphics performance from \textbf{14FPS to 31FPS} on iPhone 4.
+% 	\item Designed synchronization tool with C++/Python to support inter-department process.
+% 	% \item Acted as communicator between Technical and Art department to smooth out interdepartmental tasks.
+% 	% \item Acted as technical leader of internal iOS project. My demonstration attracted 3 clients to sign contracts with Virtuos on new iOS projects.
+% \end{itemize}
+% }
 
 %\cventry{2009}{Intern Programmer}{Endress+Hauser}{Shanghai}{}
 %{
@@ -87,14 +115,14 @@
 %\end{itemize}
 %}
 
-\cventry{2008}{Volunteer, Assistant Officer}{International Broadcast Center, $29$th Olympic Games}
-{Beijing}{}
-{
-\begin{itemize}
-	\item Collected needs from agents of different media. Contact officers from inside IBC to meet their needs, or turn to Director for request necessary resources.
-	\item Administrated attendance system of the venue, sending daily report on venue operations status.
-\end{itemize}
-}
+% \cventry{2008}{Volunteer, Assistant Officer}{International Broadcast Center, $29$th Olympic Games}
+% {Beijing}{}
+% {
+% \begin{itemize}
+% 	\item Collected needs from agents of different media. Contact officers from inside IBC to meet their needs, or turn to Director for request necessary resources.
+% 	\item Administrated attendance system of the venue, sending daily report on venue operations status.
+% \end{itemize}
+% }
 
 %\cventry{2007-2009}{Vice Director, Director}{Liaison Department, Student Union of Dept., Tsinghua University}
 %{Beijing}{}
@@ -105,31 +133,138 @@
 %\end{itemize}
 %}
 
-\section{Personal Projects}
+\section{Projects}
 
-\cventry{2013}
-{image-converter-for-kindle: Convert JPEG images to kindle screensavers}
-{Python}
+\cventry{2015--present}
+{Stellar Wi-Fi Smart Home Products}
+{iOS Developer $\rightarrow$ Product Manager}
 {}{}
 {
-Resize, crop, rotate and optimize images for the e-ink screen on Kindle.
+\begin{itemize}
+	\item Develop Wi-Fi smart bulb, ZigBee hub, bulb, remote control, curtain controller, etc.
+	\item Released  iOS app version 1.0 in 32 days including learning Objective-C for 2 weeks.
+	\item Voice control available via Amazon Alexa and Google Assistant.
+	\item Define product roadmap, backlog and test plan. Review API design and major merge requests.
+\end{itemize}
 }
 
-\cventry{2013}
-{mymaxim: Show random maxim in my blog posts}
-{Javascript}
+\cventry{2015--present}
+{StarRiver: Smart Pole System}
+{C++ Dev $\rightarrow$ Product Owner $\rightarrow$ Team Coach}
 {}{}
 {
-A script that shows random maxims on my personal site.
+\begin{itemize}
+	\item Developed a management platform for intelligent street lights for device control and monitoring of luminaries, LED displays, environment sensors, Wi-Fi APs, etc. System capacity was tested and rated at 20,000 devices.
+	\item Enable low-cost customization by an architecture that decouples the application, API and datastore.
+	\item Being compatible with Huawei agile controllers and IoT platform, StarRiver has been incorporated into Huawei Smart City solution v1.0 in Sep 2017. It is expected to pass all tests for v2.0 in Dec 2018.
+	\item Participate in defining roadmap, designing system architecture and APIs. Lead the 15-member team to adopt and \textbf{practice the Scrum method}.
+\end{itemize}
 }
 
-\cventry{2012}
-{hkputhesis: The Hong Kong Polytechnic University M.Sc. thesis latex template}
-{\LaTeX}
+\cventry{2017--2018}
+{Huawei Quality Systems Audit: Soft Quality}
+{Head of Functional Unit}
 {}{}
 {
-No one has ever made such a template for HKPU thesis. While I was writing my M.Sc. dissertation, I wrote the template and open-sourced it in case someone needed them in the future.
+\begin{itemize}
+	\item Revise process documentation to clearly define the processes of requirement management, design, development, validation, deployment and change management.
+	\item Incorporate IT tools, such as a wiki/issue tracker/GitLab merge requests, to facilitate the management of requirements, defects and changes.
+	\item Set up rules for retrospectives and root cause analysis to reduce defect rate. Started entry-level risk analysis and maturity estimation.
+	\item Passed Huawei QSA for Smart City BU in July 2018 and Smart Home BU in Aug 2018.
+\end{itemize}
 }
+
+\cventry{2017--2018}
+{A Study of a Use Case Scenario Design of Wi-Fi Smart Bulbs}
+{Corporate Advisor for Innovative Practical Projects (IPP) Project}
+{Shanghai Jiao Tong University}{}
+{
+\begin{itemize}
+	\item Advise two sophomores to design innovative use cases for Sansi smart Wi-Fi bulbs.
+	\item Revise and edit the system design, presentation materials and reports. \href{https://bingcheng1998.github.io/zh-CN/制作/sansi全彩灯泡的app设计.html}{The project passed the acceptance of the EE department and was highly evaluated}.
+\end{itemize}
+}
+
+\cventry{2017--2021 (expected)}
+{Key Technology Research and Demonstration Application of Outdoor Intelligent Lighting Gateway and Control Platform}
+{Head of Project Secretary Team}
+{\href{http://service.most.gov.cn/u/cms/static/201706/05145323ywhn.pdf}{National Key R\&D Program of China 2017YFB0403500}}{}
+{
+\begin{itemize}
+	\item Assist the project leader to organize, host, and participate in relevant meetings held by the Ministry of Science and Technology and project member organizations.
+	\item Coordinate resources in companies and organizations participating the project and departments within Sansitech to ensure that the project is implemented according to the plan.
+\end{itemize}
+}
+
+% \cventry{2017}
+% {显示屏新产品开发}
+% {项目管理}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item P1.67/P1.25/P0.94 16:9小间距屏产品，P3.9/4.8室外租赁屏、P2.9/3.9室内租赁屏，P1.875/P2.5室内固装屏，P2.5室内/室外广告机产品研发
+% 	\item 负责项目进度把控，电子、结构、电气设计评审
+% \end{itemize}
+% }
+
+% \cventry{2017}
+% {监控中心 LED 显示屏中控系统}
+% {C++/Qt}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item 小间距屏的窗口布局定义、切换；信号源切换；播放列表控制及屏体控制的一体化应用。广泛用于交通、公安、军事指挥中心。
+% 	\item 支持 Windows / 麒麟 Linux / iPad 三平台。
+% 	\item 4人项目，负责定义产品开发路线图，参与制定模块间通信方式，开发评审。
+% \end{itemize}
+% }
+
+\cventry{2014}
+{StarRiver: Street Light Management System 1.0}
+{C++}
+{}{}
+{
+\begin{itemize}
+	\item Developed a street light management system with dimming, color temperature setting, operational status monitoring, error reporting. System capacity was tested and rated at 5,000 lights.
+	\item Developed the server that handles hardware communications and database operations. The system evolves to be a smart pole system mentioned above since 2015.
+\end{itemize}
+}
+
+\cventry{2014}
+{Remote Monitoring System of Highway Variable Message Signs}
+{C++}
+{}{}
+{
+\begin{itemize}
+	\item Collect status and snapshots of highway VMS products through GPRS connection.
+	\item Reduce the cost of on-site inspections by less manual inspections and  specific maintenance advices.
+	\item Developed the server part running on Linux. \textbf{The server application kept running since Feb 2014 with only a two-minute maintenance window in 2016 to add a new feature.}
+\end{itemize}
+}
+
+% \cventry{2013}
+% {image-converter-for-kindle: Convert JPEG images to kindle screensavers}
+% {Python}
+% {}{}
+% {
+% Resize, crop, rotate and optimize images for the e-ink screen on Kindle.
+% }
+%
+% \cventry{2013}
+% {mymaxim: Show random maxim in my blog posts}
+% {Javascript}
+% {}{}
+% {
+% A script that shows random maxims on my personal site.
+% }
+%
+% \cventry{2012}
+% {hkputhesis: The Hong Kong Polytechnic University M.Sc. thesis latex template}
+% {\LaTeX}
+% {}{}
+% {
+% No one has ever made such a template for HKPU thesis. While I was writing my M.Sc. dissertation, I wrote the template and open-sourced it in case someone needed them in the future.
+% }
 
 \cventry{2011--2012}
 {3D Palm-print Recognition}
@@ -142,29 +277,29 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 \end{itemize}
 }
 
-\cventry{2010}
-{Real-time Parallel Decoding of Multi-view Video}
-{C++}
-{Adviser: Lifeng Sun}{\textit{Scoring 93/100, top 10\%}}
-{
-\begin{itemize}
-	\item Involved in the scheduling algorithm design for dual-view to 8-view MVC video.
-	\item Assisted to implement a MVC enc/decoding tool, focusing on the decoding.
-	\item Designed and implemented a 3D MVC player on the NVIDIA 3D Vision platform.
-	\item Adopted by CCTV to provide experimental 3D online broadcasting of the 2010 Asian Games.
-\end{itemize}
-}
+% \cventry{2010}
+% {Real-time Parallel Decoding of Multi-view Video}
+% {C++}
+% {Adviser: Lifeng Sun}{\textit{Scoring 93/100, top 10\%}}
+% {
+% \begin{itemize}
+% 	\item Involved in the scheduling algorithm design for dual-view to 8-view MVC video.
+% 	\item Assisted to implement a MVC enc/decoding tool, focusing on the decoding.
+% 	\item Designed and implemented a 3D MVC player on the NVIDIA 3D Vision platform.
+% 	\item Adopted by CCTV to provide experimental 3D online broadcasting of the 2010 Asian Games.
+% \end{itemize}
+% }
 
-\cventry{2010}
-{MIPS CPU Simulator}
-{Java}
-{}{}
-{
-\begin{itemize}
-	\item A simulator that reads assembly code and illustrates how a MIPS CPU executes it.
-	\item States of all registers and memory spaces can be shown.
-\end{itemize}
-}
+% \cventry{2010}
+% {MIPS CPU Simulator}
+% {Java}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item A simulator that reads assembly code and illustrates how a MIPS CPU executes it.
+% 	\item States of all registers and memory spaces can be shown.
+% \end{itemize}
+% }
 
 %\cventry{2009}
 %{Intelligent Video Processing}
@@ -178,18 +313,18 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 %\end{itemize}
 %}
 
-\cventry{2009}
-{Ray-tracing Renderer and Mesh Simplification}
-{C++}
-{Computer Graphics course project}{ranked 6/90+ students}
-{{
-\begin{itemize}
-	\item Implemented a C++ ray-tracing renderer with Phong model.
-	\item \textbf{Top 10\%} by rendering speed in class.
-	\item Implemented both vertex decimation and edge contraction algorithms to simplify a mesh to a customizable complexity.
-	\item Provided real-time preview of simplification progress with OpenGL.
-\end{itemize}}
-}
+% \cventry{2009}
+% {Ray-tracing Renderer and Mesh Simplification}
+% {C++}
+% {Computer Graphics course project}{ranked 6/90+ students}
+% {{
+% \begin{itemize}
+% 	\item Implemented a C++ ray-tracing renderer with Phong model.
+% 	\item \textbf{Top 10\%} by rendering speed in class.
+% 	\item Implemented both vertex decimation and edge contraction algorithms to simplify a mesh to a customizable complexity.
+% 	\item Provided real-time preview of simplification progress with OpenGL.
+% \end{itemize}}
+% }
 
 % \cventry{2009}
 % {PhoneMe: A cross-platform address book}
@@ -213,19 +348,19 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 % Implemented a lite FTP server and a client with C++ socket.
 % }
 
-\cventry{2008}
-{16-bit FPGA MIPS CPU}
-{VHDL}
-{}{}
-{
-\begin{itemize}
-	\item Designed a five-step pipelining structure.
-	\item Implemented a processor in VHDL.
-	\item Drove several peripherals including audio and video output.
-	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
-	\item Worked as a team leader.
-\end{itemize}
-}
+% \cventry{2008}
+% {16-bit FPGA MIPS CPU}
+% {VHDL}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item Designed a five-step pipelining structure.
+% 	\item Implemented a processor in VHDL.
+% 	\item Drove several peripherals including audio and video output.
+% 	\item Processor frequency can be up to 50MHz on Cyclone II FPGA.
+% 	\item Worked as a team leader.
+% \end{itemize}
+% }
 
 % \cventry{2008}
 % {Mine Sweeper on FPGA}
@@ -242,13 +377,13 @@ No one has ever made such a template for HKPU thesis. While I was writing my M.S
 \nocite{*}
 \renewcommand{\refname}{Publications and Patents}
 \bibliographystyle{IEEEtran}
-\bibliography{publications-en}       % 'publications' is the name of a BibTeX file
+% \bibliography{publications-en}       % 'publications' is the name of a BibTeX file
 
 \section{Skills}
 \cvitem{Programming}{Used in Working: C++, Objective-C, MATLAB, \LaTeX. Used in Personal Code: Python, Java, R}
-\cvitem{Keynote}{Proficient in making readable and clear slides using Apple Keynote or Microsoft PowerPoint. Experienced in delivering presentations.}
-\cvitem{Data Analyzing}{Good at computer aided data analysis tools such as Excel, GNU R. Able to write programs to process and interpret data.}
-\cvitem{English}{Fluent in spoken and written English, CET-6 652, TOEFL 107}
+\cvitem{Public Speaking}{Quarter and annual reports to the senior management and shareholders, \href{http://www.china-led.net/news/201610/24/35439.html}{product launch}, keynotes in industry conferences (\href{http://www.myjizhi.com/1000000000119150}{a},\href{http://www.ty360.com/2018/8/2018_1_87704.htm}{b},\href{http://222.66.64.131:8080/sdzg/page.jsp?artid=7347&colid=173&fatherid=151}{c}) \href{https://edwardtoday.github.io/talks/}{and training courses}.}
+% \cvitem{Data Analyzing}{Good at computer aided data analysis tools such as Excel, GNU R. Able to write programs to process and interpret data.}
+\cvitem{English}{Fluent in spoken and written English. Capable of working in an English-Speaking environment. CET-6: 652(\href{http://www.cet.edu.cn/cet2011.htm}{99th percentile})}
 %\cvitem{Zhihu}{\url{zhihu.com/people/qingpei}, My questions and answers. (Chinese version of Quora)}
 
 % \section{Awards}

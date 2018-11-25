@@ -17,7 +17,7 @@
 \setCJKmonofont{Menlo}
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip = 0.5pt plus 1pt minus 0.1pt
-\linespread{1.2} 						% 行间距
+\linespread{1.18} 						% 行间距
 \setlength{\parskip}{0.3cm}
 
 \usepackage{datetime}
@@ -53,39 +53,48 @@
 %\section{求职意向}
 %\cvitem{开发工程师}{应用软件、系统前端/后端开发}
 
+\section{教育经历}
+\cventry{2011--2012}{软件科技专业 硕士}{香港理工大学}{香港}{学分绩:3.95/4，获“成绩优异”评价}{}
+\cventry{2006--2010}{计算机科学与技术专业 学士}{清华大学}{北京}{学分绩:85/100}{}
+\cventry{2007--2010}{经济学 学士}{清华大学}{北京}{双学位}{}
+
 \section{工作经历}
 
-\cventry{2015至今}{软件组组长、软件研究所所长}{上海三思电子工程有限公司}{上海}{}
+% usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
+
+\cventry{2015至今}{软件研究所所长}{\href{http://www.sansitech.com/}{上海三思电子工程有限公司}}{}{}
 {
 \begin{itemize}
-	\item 带领软件团队，负责公司桌面应用、Web 应用、移动应用的开发。
-	\item 负责合同软件定制需求分析、任务安排与进度掌控。
-	\item 制定开发流程、建立软件测试流程规范，推动团队实践持续集成并提高自动化测试率。
-	\item 负责团队建设，将开发团队由8人逐渐扩充至39人以满足业务发展和产品线扩张对软件及云平台的需求。
+	\item 带领软件团队。负责公司产品桌面、Web、移动应用的需求分析、技术选型与项目管理。
+	\item 确立部门年度和季度目标，帮助开发小组及个人明确季度目标。
+	\item 制定开发流程、建立软件测试规范，代表软件团队接受ISO、GJB及大客户的体系审核。
+	\item 推动团队实践版本控制（Git \& GitLab）、持续集成（GitLab CI）并逐步提高自动化率（单元测试、少量UI测试、App测试版本的自动化部署）。利用GitLab、Redmine的行为数据辅助考核。
+	\item 负责团队建设，将开发团队由8人逐渐扩充至39人以满足业务发展（小间距和户外屏的需求逐步分离）和产品线扩张（新增智慧路灯、智能家居产品）对软件及云平台的需求。
+	\item 通过长期组织部门培训（月均2次）和配置管理，在2018 Q1～Q3团队流动性高峰期（期初38人，期末32人，出18人，进12人）保障重点产品和合同软件的交付未受影响。
 \end{itemize}
 }
 
-\cventry{2017}{产品研发中心经理、智能家居组组长（兼）}{上海三思电子工程有限公司}{上海}{}
+\cventry{2017}{产品研发中心经理、智能家居组组长（兼）}{\href{http://www.sansitech.com/}{上海三思电子工程有限公司}}{}{}
 {
 \begin{itemize}
-	\item 带领6位产品经理，协调7个专业组，承担显示屏新产品开发职责
-	\item 8个月时间开发小间距全彩屏、室内外租赁屏、室内外固装屏、高速双基色、室内外广告机、ZigBee 智能家居套装等11个产品。
-	\item 带领11人团队（7软件+4硬件）开发 Wi-Fi 智能球泡灯软硬件和 ZigBee 智能家居套装
-	\item 负责团队建设，参与电子、结构、工业设计岗位招聘
+	\item 带领6位产品经理，协调7个专业组，承担显示屏新产品开发职责。
+	\item 8个月时间开发小间距全彩屏、室内外租赁/固装屏/广告机、高速双基色等11个产品。
+	\item 带领11人团队（7软件+4硬件）开发 Wi-Fi 智能球泡灯软硬件和 ZigBee 智能家居套装。
+	% \item 负责团队建设，参与电子、结构、工业设计岗位招聘。
 \end{itemize}
 }
 
-\cventry{2013--2015}{软件工程师}{上海三思电子工程有限公司}{上海}{}
+\cventry{2013--2015}{软件工程师}{\href{http://www.sansitech.com/}{上海三思电子工程有限公司}}{}{}
 {
 \begin{itemize}
-	\item 智能球泡灯 iOS 客户端。32天内做出首个可用的演示版本，其中前13天时间用于学习 Objective-C。
-	\item 独立完成LED显示屏、路灯控制系统的网络通信模块。对TCP/UDP及串口（RS-485）控制器通信提供统一的接口。通过异步设计，\textbf{吞吐量比旧版提升6倍}。
+	\item 开发公司高速公路监控、照明控制、显示屏校正等通用软件。
+	\item 独立完成LED显示屏、路灯控制系统的通信模块。通过异步设计，\textbf{吞吐量比旧版提升6倍}。
 	\item 改进内部显示屏校正软件，从成像和视觉原理出发设计校正算法，系统实现比此前\textbf{快30倍}。
-	\item 搭建内网GitLab服务器，将Git版本控制引入开发流程；同时促使同事用 Redmine 代替项目管理上的的口头沟通，优化组内协同工作流程和效率。
+	% \item 搭建内网GitLab服务器，将Git版本控制引入开发流程替代原先含时间戳的zip办法；同时促使同事用 Redmine 代替项目管理上的的口头沟通，优化组内协同工作流程和效率。
 \end{itemize}
 }
 
-\cventry{2012--2013}{助研}{人体生物特征识别研究中心}{香港理工大学计算学系}{}
+\cventry{2012--2013}{助研}{\href{https://www4.comp.polyu.edu.hk/~biometrics/}{人体生物特征识别研究中心}}{香港理工大学计算学系}{}
 {
 % \begin{description}
 % 	\item[研究对象：] 健康与糖尿病人的脉搏、心电图、舌相、呼吸气体成分、脸部照片等数据。
@@ -95,17 +104,17 @@
 % \end{description}
 }
 
-\cventry{2010--2011}{软件工程师}{上海维塔士软件科技公司}{上海}{}
-{
+% \cventry{2010--2011}{软件工程师}{上海维塔士软件科技公司}{}{}
+% {
 % \begin{itemize}
 % 	\item 从零开始设计并实现了一个跨PC/Mac/iOS系统的航海游戏。独立完成帧率优化，将iPhone 4平台的帧率从引擎默认设定下的12fps提高至35fps。
 % 	% \item 内部协同工具（C++/Python），简化美工与技术部门交接流程，降低冲突解决成本。
 % 	% \item 协调程序与美工团队的工作，在全年三个项目中向客户按时交付每一个版本，无一延期。
 % 	\item 负责iPhone/iPad实验项目开发，带领5人团队从零开始学习运用新技术按计划完成项目，吸引3家客户与公司合作该平台新项目。
 % \end{itemize}
-}
+% }
 
-%\cventry{2009}{实习程序员}{上海恩德斯豪斯自动化设备有限公司}{上海}{}
+%\cventry{2009}{实习程序员}{上海恩德斯豪斯自动化设备有限公司}{}{}
 %{
 %\begin{itemize}
 %	\item 用Modo建立产品3D模型。
@@ -135,51 +144,87 @@
 
 \cventry{2015至今}
 {智能家居产品}
-{}
+{iOS开发 $\rightarrow$ 产品经理}
 {}{}
 {
 \begin{itemize}
 	\item 开发Wi-Fi 球泡灯；ZigBee 网关、球泡灯、筒灯、遥控器、窗帘等组成的套装。
-	\item 支持本地、远程控制。实现亚马逊 Alexa 语音控制平台对接。
+	\item 在项目前14个月里独立负责Wi-Fi球泡灯 iOS 客户端。32天内做出首个可用的演示版本，其中前13天时间用于学习 Objective-C。
+	\item 对接亚马逊 Alexa 和 Google Assistant 实现自然语言声控。
 	\item 11人项目，负责定义产品开发路线图、功能需求、测试项，搭建第一版软件框架，参与制定接口，开发评审。
 \end{itemize}
 }
 
 \cventry{2015至今}
 {智慧路灯控制系统}
-{}
+{C++开发 $\rightarrow$ Product Owner $\rightarrow$ 教练}
 {}{}
 {
 \begin{itemize}
 	\item 智慧路灯控制软件。在灯控基础上，加入了屏、传感器、充电桩、无线 AP、RFID 等设备的独立功能与联动。支持20000+设备。
 	\item 通过划分 Web 应用、RESTful API 、数据库、通信底层的模块化设计，提高项目定制的灵活性。
-	\item 2017.9完成与华为 EEM 平台对接。
-	\item 初期7人，目前15人，负责定义产品开发路线图、系统架构，参与制定接口，开发评审，带团队践行Scrum方法。
+	\item 2017.9完成与华为 EEM 平台对接，写入华为智慧城市胶片1.0版。计划2018.12完成第二版对接，纳入华为胶片2.0版进行TR5审核。
+	\item 初期7人，目前15人。初期负责，后期参与定义产品开发路线图、系统架构；参与制定接口，开发评审；带团队践行Scrum方法，提供工具和内、外部培训支持。
 \end{itemize}
 }
 
-\cventry{2017}
-{显示屏新产品开发}
-{}
+\cventry{2017--2018}
+{华为供应商软件体系审核}
+{模块负责人}
 {}{}
 {
 \begin{itemize}
-	\item P1.67/P1.25/P0.94 16:9小间距屏产品，P3.9/4.8室外租赁屏、P2.9/3.9室内租赁屏，P1.875/P2.5室内固装屏，P2.5室内/室外广告机产品研发
-	\item 负责项目进度把控，电子、结构、电气设计评审
+	\item 修订程序文件，明确定义需求管理、设计、开发、测试、发布、变更过程。
+	\item 部门工作IT化，用wiki、issue和merge request做需求、缺陷和变更管理。
+	\item 建立定期复盘的制度，找缺陷根因，通过培训及工具降低缺陷率。开展初级的项目风险评估、成熟度评价。
+	\item 分别于2018年7月和8月通过华为智慧城市和智能家居的供应商审核。
 \end{itemize}
 }
 
-\cventry{2017}
-{监控中心 LED 显示屏中控系统}
-{}
-{}{}
+\cventry{2017--2018}
+{关于Wi-Fi智能球泡灯应用场景设计的研究}
+{大学生IPP项目企业导师}
+{上海交通大学}{}
 {
 \begin{itemize}
-	\item 小间距屏的窗口布局定义、切换；信号源切换；播放列表控制及屏体控制的一体化应用。广泛用于交通、公安、军事指挥中心。
-	\item 支持 Windows / 麒麟 Linux / iPad 三平台。
-	\item 4人项目，负责定义产品开发路线图，参与制定模块间通信方式，开发评审。
+	\item 指导两位学生（胡炳城、林越川）基于三思智能球泡灯的开放接口进行应用课题研究。
+	\item 对设计、实验、答辩的内容提供修订建议，\href{https://bingcheng1998.github.io/zh-CN/制作/sansi全彩灯泡的app设计.html}{通过院系验收，评价完成情况优秀}。
 \end{itemize}
 }
+
+\cventry{2017--2021（预期）}
+{室外照明智能网关及控制平台关键技术研究与示范应用}
+{项目秘书组组长}
+{\href{http://service.most.gov.cn/u/cms/static/201706/05145323ywhn.pdf}{国家"十三五"重点研发项目 2017YFB0403500}}{}
+{
+\begin{itemize}
+	\item 协助项目负责人组织、主持、参与科技部及项目召开的相关会议。
+	\item 与秘书组成员共同协调项目参与单位（华普永明、飞乐音响、建科院、海康威视等）及公司研发、财务、业务等部门的资源，保障项目按计划书执行。
+\end{itemize}
+}
+
+% \cventry{2017}
+% {显示屏新产品开发}
+% {项目管理}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item P1.67/P1.25/P0.94 16:9小间距屏产品，P3.9/4.8室外租赁屏、P2.9/3.9室内租赁屏，P1.875/P2.5室内固装屏，P2.5室内/室外广告机产品研发
+% 	\item 负责项目进度把控，电子、结构、电气设计评审
+% \end{itemize}
+% }
+
+% \cventry{2017}
+% {监控中心 LED 显示屏中控系统}
+% {C++/Qt}
+% {}{}
+% {
+% \begin{itemize}
+% 	\item 小间距屏的窗口布局定义、切换；信号源切换；播放列表控制及屏体控制的一体化应用。广泛用于交通、公安、军事指挥中心。
+% 	\item 支持 Windows / 麒麟 Linux / iPad 三平台。
+% 	\item 4人项目，负责定义产品开发路线图，参与制定模块间通信方式，开发评审。
+% \end{itemize}
+% }
 
 \cventry{2014}
 {智能路灯控制系统 1.0}
@@ -188,7 +233,7 @@
 {
 \begin{itemize}
 	\item 路灯控制软件。实现调光、调色温、状态监控、故障查询/报警等功能。测试支持5000+设备。
-	\item 2人项目，负责服务端的开发，同伴负责客户端开发。
+	\item 2人项目，负责服务端，同伴负责客户端。2015年开始转为智慧路灯控制系统（前文）。
 \end{itemize}
 }
 
@@ -199,7 +244,8 @@
 {
 \begin{itemize}
 	\item 通过 GPRS 远程检测高速公路情报板产品的工作状态、实时画面，做到故障报警。
-	\item 2人项目，负责 Linux 服务端的开发，同伴负责 Windows 客户端开发。
+	\item 降低客户的现场巡检成本，将人工全路段巡检频率降低，提供定向运维的建议。
+	\item 2人项目，负责 Linux 服务端的开发，同伴负责 Windows 客户端开发。2014年2月上线后，服务端仅有一次2016年的功能升级停止服务2分钟，其余时间稳定运行。
 \end{itemize}
 }
 
@@ -233,8 +279,8 @@
 {}{}
 {
 \begin{itemize}
-	\item 用3D掌纹特征达到了世界领先的98.7\%的身份验证准确率。（此前的文献不到93\%。）
-	\item 通过3D掌纹全局特征索引，将单个采样验证速度提高至2倍。
+	\item 提取3D掌纹特征，达到当时世界领先的98.7\%的身份验证准确率。（此前的文献不到93\%。）
+	\item 通过3D掌纹全局特征索引，将单个采样验证速度（比实验室原成果）提高至2倍。
 \end{itemize}
 }
 
@@ -331,25 +377,20 @@
 % Implemented a mine sweeper game on FPGA platform with mouse, keyboard and VGA controllers included.
 % }
 
-\section{教育经历}
-\cventry{2011--2012}{软件科技专业 硕士}{香港理工大学}{香港}{学分绩:3.95/4 获“成绩优异”评价}{}
-\cventry{2006--2010}{计算机科学与技术专业 学士}{清华大学}{北京}{学分绩:85/100}{}
-\cventry{2007--2010}{经济学 学士}{清华大学}{北京}{双学位}{}
-
 % Publications from a BibTeX file without multibib
 % to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
 
 \nocite{*}
 \renewcommand{\refname}{论文、专利}
 \bibliographystyle{gbt7714-2005}
-\bibliography{publications-cn}       % 'publications' is the name of a BibTeX file
+% \bibliography{publications-cn}       % 'publications' is the name of a BibTeX file
 
 
 \section{工作技能}
 \cvitem{计算机语言}{工作项目使用: C++, Objective-C； 个人项目使用: Python, MATLAB, \LaTeX}
-% \cvitem{演示文稿}{擅长用Apple Keynote、Powerpoint制作可读性高、重点突出的演示文稿}
+\cvitem{公开演讲}{向公司管理层及股东作部门工作汇报；\href{http://www.china-led.net/news/201610/24/35439.html}{产品发布}及行业会议主题演讲 (\href{http://www.myjizhi.com/1000000000119150}{a},\href{http://www.ty360.com/2018/8/2018_1_87704.htm}{b},\href{http://222.66.64.131:8080/sdzg/page.jsp?artid=7347&colid=173&fatherid=151}{c})；\href{https://edwardtoday.github.io/talks/}{培训}等}
 % \cvitem{数据分析}{熟练使用Excel制表，掌握计算机辅助数据分析，能够编写程序解决实际问题}
-\cvitem{英语}{英语流利对话、读写，曾在国家级、省级英语竞赛获奖；CET-6 652分, TOEFL 107分}
+\cvitem{英语}{英语流利对话、读写，可作为工作语言。获\href{http://www.smmail.cn/smmail/ggxx/mydc/userobject1ai39285.html}{海文杯英语竞赛一等奖（上海市第11名）}、\href{https://paper.i21st.cn/story/18960.html}{第三届“21世纪杯”全国英语演讲比赛二等奖}；CET-6 652分(\href{http://www.cet.edu.cn/cet2011.htm}{百分位99\%})}
 % \cvitem{驾驶}{C1驾照，6年驾龄，无扣分记录、无事故记录}
 % \cvitem{摄影摄像}{帮多位朋友拍摄证件照、肖像；2003年以来负责拍摄记录班级集体活动照片与纪录短片}
 % \cventry{知乎}{\url{zhihu.com/people/qingpei}}{我在知乎上的回答}{}{}{}
