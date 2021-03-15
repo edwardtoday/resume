@@ -23,6 +23,7 @@ cn:
 
 clean:
 	${TEXCOMMAND} -c
+	rm pdf/*.xdv
 
 release:
 	# git push origin ${GHBRANCH}
